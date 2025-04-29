@@ -141,11 +141,14 @@
                     <option value="set1">Set 1 – Exam A</option>
                     <option value="set2">Set 2 – Exam B</option>
                     <option value="set3">Set 3 – Exam C</option>
-                  </optgroup>
-                  <optgroup label="CTFL Sample Exams">
+                </optgroup>
+                <optgroup label="CTFL Sample Exams">
                     <option value="set4">Set 4 – CTFL Sample 1</option>
                     <option value="set5">Set 5 – CTFL Sample 2</option>
-                  </optgroup>
+                </optgroup>
+                <optgroup label="CTFL Sample Exams">
+                    <option value="set6">Set 6 – ISTQB Sample Exam B</option>
+                </optgroup>
             </select>
             <button id="start-test">Start Test</button>
         </div>
@@ -352,6 +355,12 @@
             let html = activeQuestions[index].question;
             if (activeQuestions[index].image) {
                 html += `<br><img src="${activeQuestions[index].image}" alt="Question image" style="max-width:100%;margin:10px 0;">`;
+            }
+            if (activeQuestions[index].table_image) {
+                html += `<br>${activeQuestions[index].table_image}`;
+            }
+            if (activeQuestions[index].diagram_image) {
+                html += `<br>${activeQuestions[index].diagram_image}`;
             }
             questionText.innerHTML = html;
 

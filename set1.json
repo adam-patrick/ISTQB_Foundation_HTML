@@ -7,7 +7,8 @@
             "We can run different tests in different environments.",
             "The more stages we have, the better the testing."
         ],
-        "answer": 0
+        "answer": 0,
+        "comment": "Question #1"
     },
     {
         "question": "Which of the following is likely to benefit most from the use of test tools providing test capture and replay facilities?",
@@ -17,7 +18,8 @@
             "System testing",
             "User acceptance testing"
         ],
-        "answer": 0
+        "answer": 0,
+        "comment": "Question #2"
     },
     {
         "question": "Which of the following statements is NOT correct?",
@@ -27,7 +29,8 @@
             "A minimal test set that achieves 100% path coverage will generally detect more faults than one that achieves 100% statement coverage.",
             "A minimal test set that achieves 100% statement coverage will generally detect more faults than one that achieves 100% branch coverage."
         ],
-        "answer": 3
+        "answer": 3,
+        "comment": "Question #3"
     },
     {
         "question": "Which of the following requirements is testable?",
@@ -37,7 +40,8 @@
             "The response time shall be less than one second for the specified design load.",
             "The system shall be built to be portable."
         ],
-        "answer": 2
+        "answer": 2,
+        "comment": "Question #4"
     },
     {
         "question": "For the ticket pricing procedure, what is the minimum number of tests needed to ensure all questions are asked, all combinations occur and all replies given?",
@@ -47,7 +51,8 @@
             "5",
             "6"
         ],
-        "answer": 0
+        "answer": 0,
+        "comment": "Question #5"
     },
     {
         "question": "Error guessing:",
@@ -57,7 +62,8 @@
             "is only performed in user acceptance testing.",
             "is not repeatable and should not be used."
         ],
-        "answer": 0
+        "answer": 0,
+        "comment": "Question #6"
     },
     {
         "question": "Which of the following is NOT true of test coverage criteria?",
@@ -67,7 +73,8 @@
             "A measure of test coverage criteria is the percentage of faults found.",
             "Test coverage criteria are often used when specifying test completion criteria."
         ],
-        "answer": 2
+        "answer": 2,
+        "comment": "Question #7"
     },
     {
         "question": "In prioritizing what to test, the most important objective is to:",
@@ -77,7 +84,8 @@
             "obtain good test coverage.",
             "test whatever is easiest to test."
         ],
-        "answer": 1
+        "answer": 1,
+        "comment": "Question #8"
     },
     {
         "question": "Which of the following pairs of test management terms and activity descriptions is correct?",
@@ -87,7 +95,8 @@
             "v-3,w-4,x-1,y-5,z-2",
             "v-2,w-1,x-4,y-3,z-5"
         ],
-        "answer": 2
+        "answer": 2,
+        "comment": "Question #9"
     },
     {
         "question": "Which one of the following statements about system testing is NOT true?",
@@ -97,7 +106,8 @@
             "Faults found during system tests can be very expensive to fix.",
             "End-users should be involved in system tests."
         ],
-        "answer": 3
+        "answer": 3,
+        "comment": "Question #10"
     },
     {
         "question": "Which of the following is false regarding incidents?",
@@ -107,7 +117,8 @@
             "Incidents can be analyzed to assist in test process improvement.",
             "An incident can be raised against documentation."
         ],
-        "answer": 0
+        "answer": 0,
+        "comment": "Question #11"
     },
     {
         "question": "Enough testing has been performed when:",
@@ -117,7 +128,8 @@
             "no more faults are found.",
             "the users won't find any serious faults."
         ],
-        "answer": 1
+        "answer": 1,
+        "comment": "Question #12"
     },
     {
         "question": "Which of the following is NOT true of incidents?",
@@ -127,7 +139,8 @@
             "Incidents require investigation and/or correction.",
             "Incidents are raised when expected and actual results differ."
         ],
-        "answer": 0
+        "answer": 0,
+        "comment": "Question #13"
     },
     {
         "question": "Which of the following is not described in a unit test standard?",
@@ -137,7 +150,8 @@
             "stress testing",
             "modified condition/decision coverage"
         ],
-        "answer": 2
+        "answer": 2,
+        "comment": "Question #14"
     },
     {
         "question": "Which of the following is false regarding reliability and debugging?",
@@ -147,7 +161,8 @@
             "A fault need not affect the reliability of a system.",
             "Undetected errors may lead to faults and eventually to incorrect behavior."
         ],
-        "answer": 1
+        "answer": 1,
+        "comment": "Question #15"
     },
     {
         "question": "Which one of the following statements, about capture-replay tools, is NOT correct?",
@@ -157,7 +172,8 @@
             "They are the most frequently purchased types of CAST tool.",
             "They capture aspects of user behavior."
         ],
-        "answer": 1
+        "answer": 1,
+        "comment": "Question #16"
     },
     {
         "question": "How would you estimate the amount of re-testing likely to be required?",
@@ -167,7 +183,8 @@
             "Time allocated for regression testing",
             "a & b"
         ],
-        "answer": 3
+        "answer": 3,
+        "comment": "Question #17"
     },
     {
         "question": "Which of the following is true of the V-model?",
@@ -177,7 +194,8 @@
             "It specifies the test techniques to be used.",
             "It includes the verification of designs."
         ],
-        "answer": 3
+        "answer": 3,
+        "comment": "Question #18"
     },
     {
         "question": "The oracle assumption:",
@@ -187,7 +205,8 @@
             "is that the tester knows everything about the software under test.",
             "is that the tests are reviewed by experienced testers."
         ],
-        "answer": 1
+        "answer": 1,
+        "comment": "Question #19"
     },
     {
         "question": "Which of the following characterizes the cost of faults?",
@@ -197,7 +216,8 @@
             "Faults are cheapest to find in the early development phases but the most expensive to fix then.",
             "Although faults are most expensive to find during early development phases, they are cheapest to fix then."
         ],
-        "answer": 0
+        "answer": 0,
+        "comment": "Question #20"
     },
     {
         "question": "Which of the following should NOT normally be an objective for a test?",
@@ -207,7 +227,8 @@
             "To demonstrate that the software doesn't work.",
             "To prove that the software is correct."
         ],
-        "answer": 3
+        "answer": 3,
+        "comment": "Question #21"
     },
     {
         "question": "Which of the following is a form of functional testing?",
@@ -217,7 +238,8 @@
             "Performance testing",
             "Security testing"
         ],
-        "answer": 0
+        "answer": 0,
+        "comment": "Question #22"
     },
     {
         "question": "Which of the following would NOT normally form part of a test plan?",
@@ -227,7 +249,8 @@
             "Risks",
             "Schedule"
         ],
-        "answer": 1
+        "answer": 1,
+        "comment": "Question #23"
     },
     {
         "question": "Which of these activities provides the biggest potential cost saving from the use of CAST?",
@@ -237,7 +260,8 @@
             "Test execution",
             "Test planning"
         ],
-        "answer": 2
+        "answer": 2,
+        "comment": "Question #24"
     },
     {
         "question": "Which of the following is NOT a white box technique?",
@@ -247,7 +271,8 @@
             "Data flow testing",
             "State transition testing"
         ],
-        "answer": 3
+        "answer": 3,
+        "comment": "Question #25"
     },
     {
         "question": "Data flow analysis studies:",
@@ -257,7 +282,8 @@
             "the use of data on paths through the code.",
             "the intrinsic complexity of the code."
         ],
-        "answer": 2
+        "answer": 2,
+        "comment": "Question #26"
     },
     {
         "question": "In the tax calculation system, which is a valid Boundary Value Analysis test case?",
@@ -267,7 +293,8 @@
             "£33501",
             "£28000"
         ],
-        "answer": 2
+        "answer": 2,
+        "comment": "Question #27"
     },
     {
         "question": "An important benefit of code inspections is that they:",
@@ -277,7 +304,8 @@
             "can be performed by inexperienced staff.",
             "are cheap to perform."
         ],
-        "answer": 0
+        "answer": 0,
+        "comment": "Question #28"
     },
     {
         "question": "Which is the best source of Expected Outcomes for User Acceptance Test scripts?",
@@ -287,7 +315,8 @@
             "User requirements",
             "System specification"
         ],
-        "answer": 2
+        "answer": 2,
+        "comment": "Question #29"
     },
     {
         "question": "What is the main difference between a walkthrough and an inspection?",
@@ -297,7 +326,8 @@
             "Authors are not present during inspections, whilst they are during walkthroughs.",
             "A walkthrough is lead by the author, whilst an inspection is lead by a trained moderator."
         ],
-        "answer": 3
+        "answer": 3,
+        "comment": "Question #30"
     },
     {
         "question": "Which one describes the major benefit of verification early in the life cycle?",
@@ -307,7 +337,8 @@
             "It reduces defect multiplication.",
             "It allows testers to become involved early in the project."
         ],
-        "answer": 2
+        "answer": 2,
+        "comment": "Question #31"
     },
     {
         "question": "Integration testing in the small:",
@@ -317,7 +348,8 @@
             "only uses components that form part of the live system.",
             "tests interfaces to other systems."
         ],
-        "answer": 1
+        "answer": 1,
+        "comment": "Question #32"
     },
     {
         "question": "Static analysis is best described as:",
@@ -327,7 +359,8 @@
             "the analysis of program code.",
             "the use of black box testing."
         ],
-        "answer": 2
+        "answer": 2,
+        "comment": "Question #33"
     },
     {
         "question": "Alpha testing is:",
@@ -337,7 +370,8 @@
             "pre-release testing by end user representatives at the developer's site.",
             "pre-release testing by end user representatives at their sites."
         ],
-        "answer": 2
+        "answer": 2,
+        "comment": "Question #34"
     },
     {
         "question": "A failure is:",
@@ -347,7 +381,8 @@
             "an incorrect step, process or data definition in a computer program.",
             "a human action that produces an incorrect result."
         ],
-        "answer": 1
+        "answer": 1,
+        "comment": "Question #35"
     },
     {
         "question": "In the tax calculation system, which group of numbers would fall into the same equivalence class?",
@@ -357,7 +392,8 @@
             "£28001; £32000; £35000",
             "£5800; £28000; £32000"
         ],
-        "answer": 3
+        "answer": 3,
+        "comment": "Question #36"
     },
     {
         "question": "The most important thing about early test design is that it:",
@@ -367,7 +403,8 @@
             "can prevent fault multiplication.",
             "will find all faults."
         ],
-        "answer": 2
+        "answer": 2,
+        "comment": "Question #37"
     },
     {
         "question": "Which of the following statements about reviews is true?",
@@ -377,7 +414,8 @@
             "Reviews are unlikely to find faults in test plans.",
             "Reviews should be performed on specifications, code, and test plans."
         ],
-        "answer": 3
+        "answer": 3,
+        "comment": "Question #38"
     },
     {
         "question": "Test cases are designed during:",
@@ -387,7 +425,8 @@
             "test configuration.",
             "test specification."
         ],
-        "answer": 3
+        "answer": 3,
+        "comment": "Question #39"
     },
     {
         "question": "A configuration management system would NOT normally provide:",
@@ -397,6 +436,7 @@
             "the precise differences in versions of software component source code.",
             "restricted access to the source code library."
         ],
-        "answer": 1
+        "answer": 1,
+        "comment": "Question #40"
     }
 ]

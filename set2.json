@@ -7,7 +7,8 @@
             "a failure",
             "a defect"
         ],
-        "answer": 2
+        "answer": 2,
+        "comment": "Question #1"
     },
     {
         "question": "Regression testing should be performed:",
@@ -17,7 +18,8 @@
             "as often as possible",
             "when the environment has changed"
         ],
-        "answer": 2
+        "answer": 2,
+        "comment": "Question #2"
     },
     {
         "question": "IEEE 829 test plan documentation standard contains all of the following except",
@@ -27,7 +29,8 @@
             "test tasks",
             "test specifications"
         ],
-        "answer": 3
+        "answer": 3,
+        "comment": "Question #3"
     },
     {
         "question": "When should testing be stopped?",
@@ -37,7 +40,8 @@
             "when all faults have been fixed correctly",
             "it depends on the risks for the system being tested"
         ],
-        "answer": 3
+        "answer": 3,
+        "comment": "Question #4"
     },
     {
         "question": "Order numbers on a stock control system can range between 10000 and 99999 inclusive. Which of the following inputs might be a result of designing tests for only valid equivalence classes and valid boundaries?",
@@ -47,7 +51,8 @@
             "10000, 50000, 99999",
             "10000, 99999, 100000"
         ],
-        "answer": 2
+        "answer": 2,
+        "comment": "Question #5"
     },
     {
         "question": "Consider the following statements about early test design:\ni. early test design can prevent fault multiplication\nii. faults found during early test design are more expensive to fix\niii. early test design can find faults\niv. early test design can cause changes to the requirements\nv. early test design normally takes more effort",
@@ -57,7 +62,8 @@
             "i, iii, iv & v are true; ii is false",
             "i & ii are true; iii, iv & v are false"
         ],
-        "answer": 0
+        "answer": 0,
+        "comment": "Question #6"
     },
     {
         "question": "Non-functional system testing includes:",
@@ -67,7 +73,8 @@
             "testing a system function using only the software required for that function",
             "testing for functions that should not exist"
         ],
-        "answer": 1
+        "answer": 1,
+        "comment": "Question #7"
     },
     {
         "question": "Which of the following is NOT part of configuration management?",
@@ -77,7 +84,8 @@
             "identification of test versions",
             "controlled library access"
         ],
-        "answer": 0
+        "answer": 0,
+        "comment": "Question #8"
     },
     {
         "question": "Which of the following is the main purpose of the integration strategy for integration testing in the small?",
@@ -87,7 +95,8 @@
             "to specify which modules to combine when, and how many at once",
             "to specify how the software should be divided into modules"
         ],
-        "answer": 2
+        "answer": 2,
+        "comment": "Question #9"
     },
     {
         "question": "What is the purpose of a test completion criterion?",
@@ -97,7 +106,8 @@
             "to set the criteria used in generating test inputs",
             "to determine when to stop testing"
         ],
-        "answer": 3
+        "answer": 3,
+        "comment": "Question #10"
     },
     {
         "question": "Consider the following statements:\ni. an incident may be closed without being fixed.\nii. incidents may not be raised against documentation.\niii. the final stage of incident tracking is fixing.\niv. the incident record does not include information on test environments.",
@@ -107,7 +117,8 @@
             "i and iv are true, ii and iii are false",
             "i and ii are true, iii and iv are false"
         ],
-        "answer": 1
+        "answer": 1,
+        "comment": "Question #11"
     },
     {
         "question": "Given the following code, which statement is true about the minimum number of test cases required for full statement and branch coverage?\nRead p\nRead q\nIF p+q > 100 THEN\nPrint 'Large'\nENDIF\nIF p > 50 THEN\nPrint 'p Large'\nENDIF",
@@ -117,7 +128,8 @@
             "1 test for statement coverage, 1 for branch coverage",
             "2 tests for statement coverage, 2 for branch coverage"
         ],
-        "answer": 1
+        "answer": 1,
+        "comment": "Question #12"
     },
     {
         "question": "Consider the following statements:\ni. 100% statement coverage guarantees 100% branch coverage.\nii. 100% branch coverage guarantees 100% statement coverage.\niii. 100% branch coverage guarantees 100% decision coverage.\niv. 100% decision coverage guarantees 100% branch coverage.\nv. 100% statement coverage guarantees 100% decision coverage.",
@@ -127,7 +139,8 @@
             "ii & iii are True; i, iv & v are False",
             "ii, iii & iv are True; i & v are False"
         ],
-        "answer": 3
+        "answer": 3,
+        "comment": "Question #13"
     },
     {
         "question": "Functional system testing is:",
@@ -137,7 +150,8 @@
             "testing the end to end functionality of the system as a whole",
             "testing the system performs functions within specified response times"
         ],
-        "answer": 2
+        "answer": 2,
+        "comment": "Question #14"
     },
     {
         "question": "Incidents would not be raised against:",
@@ -147,7 +161,8 @@
             "test cases",
             "improvements suggested by users"
         ],
-        "answer": 3
+        "answer": 3,
+        "comment": "Question #15"
     },
     {
         "question": "Which of the following items would not come under Configuration Management?",
@@ -157,7 +172,8 @@
             "live data",
             "user requirement documents"
         ],
-        "answer": 2
+        "answer": 2,
+        "comment": "Question #16"
     },
     {
         "question": "Maintenance testing is:",
@@ -167,7 +183,8 @@
             "testing by users to ensure that the system meets a business need",
             "testing to maintain business advantage"
         ],
-        "answer": 1
+        "answer": 1,
+        "comment": "Question #17"
     },
     {
         "question": "What can static analysis NOT find?",
@@ -177,7 +194,8 @@
             "memory leaks",
             "array bound violations"
         ],
-        "answer": 2
+        "answer": 2,
+        "comment": "Question #18"
     },
     {
         "question": "Which of the following techniques is NOT a black box technique?",
@@ -187,7 +205,8 @@
             "syntax testing",
             "boundary value analysis"
         ],
-        "answer": 1
+        "answer": 1,
+        "comment": "Question #19"
     },
     {
         "question": "Beta testing is:",
@@ -197,7 +216,8 @@
             "performed by an Independent Test Team",
             "performed as early as possible in the lifecycle"
         ],
-        "answer": 0
+        "answer": 0,
+        "comment": "Question #20"
     },
     {
         "question": "Given the following types of tool, which tools would typically be used by developers, and which by an independent system test team?\ni. static analysis\nii. performance testing\niii. test management\niv. dynamic analysis",
@@ -207,7 +227,8 @@
             "developers would typically use ii and iv; test team i and iii",
             "developers would typically use i, iii and iv; test team ii"
         ],
-        "answer": 0
+        "answer": 0,
+        "comment": "Question #21"
     },
     {
         "question": "The main focus of acceptance testing is:",
@@ -217,7 +238,8 @@
             "testing the system with other systems",
             "testing from a business perspective"
         ],
-        "answer": 3
+        "answer": 3,
+        "comment": "Question #22"
     },
     {
         "question": "Which of the following statements about component testing is FALSE?",
@@ -227,7 +249,8 @@
             "cyclomatic complexity is not a test measurement technique",
             "black box test measurement techniques all have an associated test design technique"
         ],
-        "answer": 0
+        "answer": 0,
+        "comment": "Question #23"
     },
     {
         "question": "Which of the following statements is NOT true?",
@@ -237,7 +260,8 @@
             "managers can perform inspections on management documents",
             "inspection is appropriate even when there are no written documents"
         ],
-        "answer": 3
+        "answer": 3,
+        "comment": "Question #24"
     },
     {
         "question": "A typical commercial test execution tool would be able to perform all of the following, EXCEPT:",
@@ -247,7 +271,8 @@
             "recording test inputs",
             "reading test values from a data file"
         ],
-        "answer": 0
+        "answer": 0,
+        "comment": "Question #25"
     },
     {
         "question": "The difference between re-testing and regression testing is:",
@@ -257,7 +282,8 @@
             "re-testing is done after faults are fixed; regression testing is done earlier",
             "re-testing is done by developers; regression testing is done by independent testers"
         ],
-        "answer": 0
+        "answer": 0,
+        "comment": "Question #26"
     },
     {
         "question": "Expected results are:",
@@ -267,7 +293,8 @@
             "most useful when specified in advance",
             "derived from the code"
         ],
-        "answer": 2
+        "answer": 2,
+        "comment": "Question #27"
     },
     {
         "question": "What type of review requires formal entry and exit criteria, including metrics:",
@@ -277,7 +304,8 @@
             "management review",
             "post project review"
         ],
-        "answer": 1
+        "answer": 1,
+        "comment": "Question #28"
     },
     {
         "question": "Which of the following uses Impact Analysis most?",
@@ -287,7 +315,8 @@
             "user acceptance testing",
             "maintenance testing"
         ],
-        "answer": 3
+        "answer": 3,
+        "comment": "Question #29"
     },
     {
         "question": "What is NOT included in typical costs for an inspection process?",
@@ -297,7 +326,8 @@
             "writing the documents to be inspected",
             "time spent on the document outside the meeting"
         ],
-        "answer": 2
+        "answer": 2,
+        "comment": "Question #30"
     },
     {
         "question": "Which of the following is NOT a reasonable test objective:",
@@ -307,7 +337,8 @@
             "to give confidence in the software",
             "to find performance problems"
         ],
-        "answer": 1
+        "answer": 1,
+        "comment": "Question #31"
     },
     {
         "question": "Which expression best matches the following characteristics of the review processes:\n1. led by the author\n2. undocumented\n3. no management participation\n4. led by a moderator or leader\n5. uses entry and exit criteria\ns) inspection\nt) peer review\nu) informal review\nv) walkthrough",
@@ -317,7 +348,8 @@
             "s = 1 and 5, t = 3, u = 2, v = 4",
             "s = 4 and 5, t = 1, u= 2, v = 3"
         ],
-        "answer": 0
+        "answer": 0,
+        "comment": "Question #32"
     },
     {
         "question": "Which of the following is NOT part of system testing?",
@@ -327,7 +359,8 @@
             "usability testing",
             "top-down integration testing"
         ],
-        "answer": 3
+        "answer": 3,
+        "comment": "Question #33"
     },
     {
         "question": "Which statement about expected outcomes is FALSE?",
@@ -337,7 +370,8 @@
             "expected outcomes should be predicted before a test is run",
             "expected outcomes may include timing constraints such as response times"
         ],
-        "answer": 0
+        "answer": 0,
+        "comment": "Question #34"
     },
     {
         "question": "The standard that gives definitions of testing terms is:",
@@ -347,7 +381,8 @@
             "ANSI/IEEE 829",
             "ANSI/IEEE 729"
         ],
-        "answer": 1
+        "answer": 1,
+        "comment": "Question #35"
     },
     {
         "question": "The cost of fixing a fault:",
@@ -357,7 +392,8 @@
             "decreases the later a fault is found",
             "can never be determined"
         ],
-        "answer": 1
+        "answer": 1,
+        "comment": "Question #36"
     },
     {
         "question": "Which of the following is NOT included in the Test Plan document of the Test Documentation Standard?",
@@ -367,7 +403,8 @@
             "quality plans",
             "schedules and deadlines"
         ],
-        "answer": 2
+        "answer": 2,
+        "comment": "Question #37"
     },
     {
         "question": "Could reviews or inspections be considered part of testing?",
@@ -377,7 +414,8 @@
             "yes, because both help detect faults and improve quality",
             "yes, because testing includes all non-constructive activities"
         ],
-        "answer": 2
+        "answer": 2,
+        "comment": "Question #38"
     },
     {
         "question": "Which of the following is not part of performance testing?",
@@ -387,7 +425,8 @@
             "simulating many users",
             "generating many transactions"
         ],
-        "answer": 1
+        "answer": 1,
+        "comment": "Question #39"
     },
     {
         "question": "Error guessing is best used:",
@@ -397,6 +436,7 @@
             "by inexperienced testers",
             "after the system has gone live"
         ],
-        "answer": 0
+        "answer": 0,
+        "comment": "Question #40"
     }
 ]
