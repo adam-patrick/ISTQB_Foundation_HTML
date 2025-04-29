@@ -31,5 +31,5 @@ Your quiz will now dynamically load question sets from their own JSON files.
 
 - To Add next to an option:
 ```
-"<b>a. <img src='images/sample-image.png alt='sampleImage' style='max-width:100px;'</b>",
+<b>a. <img src='images/sample-image.png' alt='sampleImage' style='max-width:100px;'></b>,
 ```
