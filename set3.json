@@ -1,0 +1,411 @@
+[
+    {
+        "question": "Software testing activities should start",
+        "options": [
+            "as soon as the code is written",
+            "during the design stage",
+            "when the requirements have been formally documented",
+            "as soon as possible in the development life cycle"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Faults found by users are due to:",
+        "options": [
+            "Poor quality software",
+            "Poor software and poor testing",
+            "bad luck",
+            "insufficient time for testing"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "What is the main reason for testing software before releasing it?",
+        "options": [
+            "to show that system will work after release",
+            "to decide when the software is of sufficient quality to release",
+            "to find as many bugs as possible before release",
+            "to give information for a risk based decision about release"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Which of the following statements is not true?",
+        "options": [
+            "performance testing can be done during unit testing as well as during the testing of whole system",
+            "The acceptance test does not necessarily include a regression test",
+            "Verification activities should not involve testers (reviews, inspections etc)",
+            "Test environments should be as similar to production environments as possible"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "When reporting faults found to developers, testers should be:",
+        "options": [
+            "as polite, constructive and helpful as possible",
+            "firm about insisting that a bug is not a “feature” if it should be fixed",
+            "diplomatic, sensitive to the way they may react to criticism",
+            "All of the above"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "In which order should tests be run?",
+        "options": [
+            "the most important tests first",
+            "the most difficult tests first(to allow maximum time for fixing)",
+            "the easiest tests first(to give initial confidence)",
+            "the order they are thought of"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "The later in the development life cycle a fault is discovered, the more expensive it is to fix. Why?",
+        "options": [{
+            "question": "What is the primary purpose of acceptance testing?",
+            "options": [
+                "To find as many defects as possible",
+                "To validate that the system meets business requirements",
+                "To verify that the system integrates correctly with other systems",
+                "To ensure the system performs well under load"
+            ],
+            "answer": 1
+        },
+            "the documentation is poor, so it takes longer to find out what the software is doing.",
+            "wages are rising",
+            "the fault has been built into more documentation, code, tests, etc",
+            "none of the above"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which is not true-The black box tester",
+        "options": [
+            "should be able to understand a functional specification or requirements document",
+            "should be able to understand the source code.",
+            "is highly motivated to find faults",
+            "is creative to find the system’s weaknesses"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "A test design technique is",
+        "options": [
+            "a process for selecting test cases",
+            "a process for determining expected outputs",
+            "a way to measure the quality of software",
+            "a way to measure in a test plan what has to be done"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Testware (test cases, test dataset)",
+        "options": [
+            "needs configuration management just like requirements, design and code",
+            "should be newly constructed for each new version of the software",
+            "is needed only until the software is released into production or use",
+            "does not need to be documented and commented, as it does not form part of the released software system"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "An incident logging system",
+        "options": [
+            "only records defects",
+            "is of limited value",
+            "is a valuable source of project information during testing if it contains all incidents",
+            "should be used only by the test team."
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Increasing the quality of the software, by better development methods, will affect the time needed for testing (the test phases) by:",
+        "options": [
+            "reducing test time",
+            "no change",
+            "increasing test time",
+            "can’t say"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Coverage measurement",
+        "options": [
+            "is nothing to do with testing",
+            "is a partial measure of test thoroughness",
+            "branch coverage should be mandatory for all software",
+            "can only be applied at unit or module testing, not at system testing"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "When should you stop testing?",
+        "options": [
+            "when time for testing has run out.",
+            "when all planned tests have been run",
+            "when the test completion criteria have been met",
+            "when no faults have been found by the tests run"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which of the following is true?",
+        "options": [
+            "Component testing should be black box, system testing should be white box.",
+            "if u find a lot of bugs in testing, you should not be very confident about the quality of software",
+            "the fewer bugs you find, the better your testing was",
+            "the more tests you run, the more bugs you will find."
+        ],
+        "answer": 1
+    },
+    {
+        "question": "What is the important criterion in deciding what testing technique to use?",
+        "options": [
+            "how well you know a particular technique",
+            "the objective of the test",
+            "how appropriate the technique is for testing the application",
+            "whether there is a tool to support the technique"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "If the pseudo code below were a programming language ,how many tests are required to achieve 100% statement coverage?\n1.If x=3 then\n2. Display_messageX;\n3. If y=2 then\n4. Display_messageY;\n5. Else\n6. Display_messageZ;\n7.Else\n8. Display_messageZ;",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Using the same code example as question 17,how many tests are required to achieve 100% branch/decision coverage?",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which of the following is NOT a type of non-functional test?",
+        "options": [
+            "State-Transition",
+            "Usability",
+            "Performance",
+            "Security"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Which of the following tools would you use to detect a memory leak?",
+        "options": [
+            "State analysis",
+            "Coverage analysis",
+            "Dynamic analysis",
+            "Memory analysis"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which of the following is NOT a standard related to testing?",
+        "options": [
+            "IEEE829",
+            "IEEE610",
+            "BS7925-1",
+            "BS7925-2"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Which of the following is the component test standard?",
+        "options": [
+            "IEEE 829",
+            "IEEE 610",
+            "BS7925-1",
+            "BS7925-2"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Which of the following statements are true?",
+        "options": [
+            "Faults in program specifications are the most expensive to fix.",
+            "Faults in code are the most expensive to fix.",
+            "Faults in requirements are the most expensive to fix",
+            "Faults in designs are the most expensive to fix."
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which of the following is not the integration strategy?",
+        "options": [
+            "Design based",
+            "Big-bang",
+            "Bottom-up",
+            "Top-down"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Which of the following is a black box design technique?",
+        "options": [
+            "statement testing",
+            "equivalence partitioning",
+            "error- guessing",
+            "usability testing"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "A program with high cyclometic complexity is almost likely to be:",
+        "options": [
+            "Large",
+            "Small",
+            "Difficult to write",
+            "Difficult to test"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Which of the following is a static test?",
+        "options": [
+            "code inspection",
+            "coverage analysis",
+            "usability assessment",
+            "installation test"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Which of the following is the odd one out?",
+        "options": [
+            "white box",
+            "glass box",
+            "structural",
+            "functional"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "A program validates a numeric field as follows:\nvalues less than 10 are rejected, values between 10 and 21 are accepted, values greater than or equal to 22 are rejected\nwhich of the following input values cover all of the equivalence partitions?",
+        "options": [
+            "10,11,21",
+            "3,20,21",
+            "3,10,22",
+            "10,21,22"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Using the same specifications as question 29, which of the following covers the MOST boundary values?",
+        "options": [
+            "9,10,11,22",
+            "9,10,21,22",
+            "10,11,21,22",
+            "10,11,20,21"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Which of these activities provides the biggest potential cost saving from the use of CAST?",
+        "options": [
+            "Test management",
+            "Test design",
+            "Test execution",
+            "Test planning"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "What is the primary purpose of static testing?",
+        "options": [
+            "To find defects early in the lifecycle",
+            "To execute tests based on requirements",
+            "To simulate real user behavior",
+            "To validate system integration"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Which of the following is an example of a non-functional requirement?",
+        "options": [
+            "The software must process 10,000 transactions per second",
+            "The system must allow users to create an account",
+            "The system should allow data to be retrieved from a database",
+            "The system should be able to process user requests within 2 seconds"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "In boundary value analysis, which of the following is the correct set of test cases for an input range from 10 to 20?",
+        "options": [
+            "9, 10, 20, 21",
+            "10, 11, 19, 20",
+            "10, 19, 20, 21",
+            "10, 15, 19, 20"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "What is the goal of regression testing?",
+        "options": [
+            "To find defects in the new code and features",
+            "To ensure that previously fixed defects do not reoccur",
+            "To test the system’s performance",
+            "To validate the system’s compliance with the requirements"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Which of the following best describes the term 'defect density'?",
+        "options": [
+            "The number of defects found in the system divided by the number of test cases executed",
+            "The total number of defects found per unit of code or function",
+            "The number of defects found during system testing",
+            "The number of defects found in the production environment"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Which testing level is primarily concerned with evaluating the system as a whole, including its integration with external systems?",
+        "options": [
+            "Unit testing",
+            "Integration testing",
+            "System testing",
+            "Acceptance testing"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "What is a key advantage of using automated testing?",
+        "options": [
+            "It can replace manual testing for all test types",
+            "It helps execute large numbers of repetitive test cases quickly",
+            "It reduces the need for skilled testers",
+            "It can identify design flaws in the system"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Which of the following is NOT a typical activity in test planning?",
+        "options": [
+            "Defining the test strategy",
+            "Defining test objectives",
+            "Designing individual test cases",
+            "Estimating the time required for testing"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which of these testing types focuses on validating the user experience and usability of a system?",
+        "options": [
+            "Functional testing",
+            "Usability testing",
+            "Security testing",
+            "Compatibility testing"
+        ],
+        "answer": 1
+    }
+]

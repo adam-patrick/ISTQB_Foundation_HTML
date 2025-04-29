@@ -1,0 +1,402 @@
+[
+    {
+        "question": "We split testing into distinct stages primarily because:",
+        "options": [
+            "Each test stage has a different purpose.",
+            "It is easier to manage testing in stages.",
+            "We can run different tests in different environments.",
+            "The more stages we have, the better the testing."
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Which of the following is likely to benefit most from the use of test tools providing test capture and replay facilities?",
+        "options": [
+            "Regression testing",
+            "Integration testing",
+            "System testing",
+            "User acceptance testing"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Which of the following statements is NOT correct?",
+        "options": [
+            "A minimal test set that achieves 100% LCSAJ coverage will also achieve 100% branch coverage.",
+            "A minimal test set that achieves 100% path coverage will also achieve 100% statement coverage.",
+            "A minimal test set that achieves 100% path coverage will generally detect more faults than one that achieves 100% statement coverage.",
+            "A minimal test set that achieves 100% statement coverage will generally detect more faults than one that achieves 100% branch coverage."
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Which of the following requirements is testable?",
+        "options": [
+            "The system shall be user friendly.",
+            "The safety-critical parts of the system shall contain 0 faults.",
+            "The response time shall be less than one second for the specified design load.",
+            "The system shall be built to be portable."
+        ],
+        "answer": 2
+    },
+    {
+        "question": "For the ticket pricing procedure, what is the minimum number of tests needed to ensure all questions are asked, all combinations occur and all replies given?",
+        "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Error guessing:",
+        "options": [
+            "supplements formal test design techniques.",
+            "can only be used in component, integration and system testing.",
+            "is only performed in user acceptance testing.",
+            "is not repeatable and should not be used."
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Which of the following is NOT true of test coverage criteria?",
+        "options": [
+            "Test coverage criteria can be measured in terms of items exercised by a test suite.",
+            "A measure of test coverage criteria is the percentage of user requirements covered.",
+            "A measure of test coverage criteria is the percentage of faults found.",
+            "Test coverage criteria are often used when specifying test completion criteria."
+        ],
+        "answer": 2
+    },
+    {
+        "question": "In prioritizing what to test, the most important objective is to:",
+        "options": [
+            "find as many faults as possible.",
+            "test high risk areas.",
+            "obtain good test coverage.",
+            "test whatever is easiest to test."
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Which of the following pairs of test management terms and activity descriptions is correct?",
+        "options": [
+            "v-3,w-2,x-1,y-5,z-4",
+            "v-2,w-5,x-1,y-4,z-3",
+            "v-3,w-4,x-1,y-5,z-2",
+            "v-2,w-1,x-4,y-3,z-5"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which one of the following statements about system testing is NOT true?",
+        "options": [
+            "System tests are often performed by independent teams.",
+            "Functional testing is used more than structural testing.",
+            "Faults found during system tests can be very expensive to fix.",
+            "End-users should be involved in system tests."
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Which of the following is false regarding incidents?",
+        "options": [
+            "Incidents should always be fixed.",
+            "An incident occurs when expected and actual results differ.",
+            "Incidents can be analyzed to assist in test process improvement.",
+            "An incident can be raised against documentation."
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Enough testing has been performed when:",
+        "options": [
+            "time runs out.",
+            "the required level of confidence has been achieved.",
+            "no more faults are found.",
+            "the users won't find any serious faults."
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Which of the following is NOT true of incidents?",
+        "options": [
+            "Incident resolution is the responsibility of the author of the software under test.",
+            "Incidents may be raised against user requirements.",
+            "Incidents require investigation and/or correction.",
+            "Incidents are raised when expected and actual results differ."
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Which of the following is not described in a unit test standard?",
+        "options": [
+            "syntax testing",
+            "equivalence partitioning",
+            "stress testing",
+            "modified condition/decision coverage"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which of the following is false regarding reliability and debugging?",
+        "options": [
+            "In a system two different failures may have different severities.",
+            "A system is necessarily more reliable after debugging for the removal of a fault.",
+            "A fault need not affect the reliability of a system.",
+            "Undetected errors may lead to faults and eventually to incorrect behavior."
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Which one of the following statements, about capture-replay tools, is NOT correct?",
+        "options": [
+            "They are used to support multi-user testing.",
+            "They are used to capture and animate user requirements.",
+            "They are the most frequently purchased types of CAST tool.",
+            "They capture aspects of user behavior."
+        ],
+        "answer": 1
+    },
+    {
+        "question": "How would you estimate the amount of re-testing likely to be required?",
+        "options": [
+            "Metrics from previous similar projects",
+            "Discussions with the development team",
+            "Time allocated for regression testing",
+            "a & b"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Which of the following is true of the V-model?",
+        "options": [
+            "It states that modules are tested against user requirements.",
+            "It only models the testing phase.",
+            "It specifies the test techniques to be used.",
+            "It includes the verification of designs."
+        ],
+        "answer": 3
+    },
+    {
+        "question": "The oracle assumption:",
+        "options": [
+            "is that there is some existing system against which test output may be checked.",
+            "is that the tester can routinely identify the correct outcome of a test.",
+            "is that the tester knows everything about the software under test.",
+            "is that the tests are reviewed by experienced testers."
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Which of the following characterizes the cost of faults?",
+        "options": [
+            "They are cheapest to find in the early development phases and the most expensive to fix in the latest test phases.",
+            "They are easiest to find during system testing but the most expensive to fix then.",
+            "Faults are cheapest to find in the early development phases but the most expensive to fix then.",
+            "Although faults are most expensive to find during early development phases, they are cheapest to fix then."
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Which of the following should NOT normally be an objective for a test?",
+        "options": [
+            "To find faults in the software.",
+            "To assess whether the software is ready for release.",
+            "To demonstrate that the software doesn't work.",
+            "To prove that the software is correct."
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Which of the following is a form of functional testing?",
+        "options": [
+            "Boundary value analysis",
+            "Usability testing",
+            "Performance testing",
+            "Security testing"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Which of the following would NOT normally form part of a test plan?",
+        "options": [
+            "Features to be tested",
+            "Incident reports",
+            "Risks",
+            "Schedule"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Which of these activities provides the biggest potential cost saving from the use of CAST?",
+        "options": [
+            "Test management",
+            "Test design",
+            "Test execution",
+            "Test planning"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which of the following is NOT a white box technique?",
+        "options": [
+            "Statement testing",
+            "Path testing",
+            "Data flow testing",
+            "State transition testing"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Data flow analysis studies:",
+        "options": [
+            "possible communications bottlenecks in a program.",
+            "the rate of change of data values as a program executes.",
+            "the use of data on paths through the code.",
+            "the intrinsic complexity of the code."
+        ],
+        "answer": 2
+    },
+    {
+        "question": "In the tax calculation system, which is a valid Boundary Value Analysis test case?",
+        "options": [
+            "£1500",
+            "£32001",
+            "£33501",
+            "£28000"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "An important benefit of code inspections is that they:",
+        "options": [
+            "enable the code to be tested before the execution environment is ready.",
+            "can be performed by the person who wrote the code.",
+            "can be performed by inexperienced staff.",
+            "are cheap to perform."
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Which is the best source of Expected Outcomes for User Acceptance Test scripts?",
+        "options": [
+            "Actual results",
+            "Program specification",
+            "User requirements",
+            "System specification"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "What is the main difference between a walkthrough and an inspection?",
+        "options": [
+            "An inspection is lead by the author, whilst a walkthrough is lead by a trained moderator.",
+            "An inspection has a trained leader, whilst a walkthrough has no leader.",
+            "Authors are not present during inspections, whilst they are during walkthroughs.",
+            "A walkthrough is lead by the author, whilst an inspection is lead by a trained moderator."
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Which one describes the major benefit of verification early in the life cycle?",
+        "options": [
+            "It allows the identification of changes in user requirements.",
+            "It facilitates timely set up of the test environment.",
+            "It reduces defect multiplication.",
+            "It allows testers to become involved early in the project."
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Integration testing in the small:",
+        "options": [
+            "tests the individual components that have been developed.",
+            "tests interactions between modules or subsystems.",
+            "only uses components that form part of the live system.",
+            "tests interfaces to other systems."
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Static analysis is best described as:",
+        "options": [
+            "the analysis of batch programs.",
+            "the reviewing of test plans.",
+            "the analysis of program code.",
+            "the use of black box testing."
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Alpha testing is:",
+        "options": [
+            "post-release testing by end user representatives at the developer's site.",
+            "the first testing that is performed.",
+            "pre-release testing by end user representatives at the developer's site.",
+            "pre-release testing by end user representatives at their sites."
+        ],
+        "answer": 2
+    },
+    {
+        "question": "A failure is:",
+        "options": [
+            "found in the software; the result of an error.",
+            "departure from specified behavior.",
+            "an incorrect step, process or data definition in a computer program.",
+            "a human action that produces an incorrect result."
+        ],
+        "answer": 1
+    },
+    {
+        "question": "In the tax calculation system, which group of numbers would fall into the same equivalence class?",
+        "options": [
+            "£4800; £14000; £28000",
+            "£5200; £5500; £28000",
+            "£28001; £32000; £35000",
+            "£5800; £28000; £32000"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "The most important thing about early test design is that it:",
+        "options": [
+            "makes test preparation easier.",
+            "means inspections are not required.",
+            "can prevent fault multiplication.",
+            "will find all faults."
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which of the following statements about reviews is true?",
+        "options": [
+            "Reviews cannot be performed on user requirements specifications.",
+            "Reviews are the least effective way of testing code.",
+            "Reviews are unlikely to find faults in test plans.",
+            "Reviews should be performed on specifications, code, and test plans."
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Test cases are designed during:",
+        "options": [
+            "test recording.",
+            "test planning.",
+            "test configuration.",
+            "test specification."
+        ],
+        "answer": 3
+    },
+    {
+        "question": "A configuration management system would NOT normally provide:",
+        "options": [
+            "linkage of customer requirements to version numbers.",
+            "facilities to compare test results with expected results.",
+            "the precise differences in versions of software component source code.",
+            "restricted access to the source code library."
+        ],
+        "answer": 1
+    }
+]

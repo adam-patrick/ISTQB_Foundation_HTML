@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ISTQB Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .options {
+            margin-top: 10px;
+        }
+
+        .option {
+            margin: 8px 0;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .option:hover {
+            background-color: #f5f5f5;
+        }
+
+        .selected {
+            background-color: #e0e0ff;
+        }
+
+        .correct {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .incorrect {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+
+        .result {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 4px;
+            display: none;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4A90E2;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #357ABD;
+        }
+
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        .progress {
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .mode-selector {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .mode-selector select,
+        .mode-selector button {
+            margin-right: 10px;
+        }
+
+        .test-complete {
+            text-align: center;
+            padding: 20px;
+            background-color: #d4edda;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .timer {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ISTQB Quiz Application</h1>
+
+    <div class="mode-selector">
+        <div>
+            <label for="mode-select">Mode: </label>
+            <select id="mode-select">
+                <option value="practice">Practice (All Questions)</option>
+                <option value="test">Test (By Sets)</option>
+            </select>
+        </div>
+        <div id="set-selector" style="margin-top: 10px; display: none;">
+            <label for="set-select">Select Set: </label>
+            <select id="set-select">
+                <optgroup label="SoftwareTestingHelp Exams">
+                    <option value="set1">Set 1 – Exam A</option>
+                    <option value="set2">Set 2 – Exam B</option>
+                    <option value="set3">Set 3 – Exam C</option>
+                  </optgroup>
+                  <optgroup label="CTFL Sample Exams">
+                    <option value="set4">Set 4 – CTFL Sample 1</option>
+                    <option value="set5">Set 5 – CTFL Sample 2</option>
+                  </optgroup>
+            </select>
+            <button id="start-test">Start Test</button>
+        </div>
+    </div>
+
+    <div id="timer" class="timer" style="display: none;">Time: 00:00</div>
+
+    <div class="stats">
+        <div>Questions: <span id="total-answered">0</span>/<span id="total-questions">0</span></div>
+        <div>Correct: <span id="total-correct">0</span></div>
+        <div>Accuracy: <span id="accuracy">0%</span></div>
+    </div>
+
+    <div class="progress">
+        <div>Question <span id="current-question">1</span> of <span id="question-count">0</span></div>
+    </div>
+
+    <div class="card" id="question-card">
+        <div id="question-text"></div>
+        <div class="options" id="options-container"></div>
+        <div class="result" id="result"></div>
+    </div>
+
+    <div class="controls">
+        <button id="prev-btn" disabled>Previous</button>
+        <button id="check-btn">Check Answer</button>
+        <button id="next-btn">Next</button>
+        <button id="random-btn">Random Question</button>
+    </div>
+
+    <div class="test-complete" id="test-complete">
+        <h2>Test Complete!</h2>
+        <div id="test-results">
+            <p>Score: <span id="final-score">0</span>%</p>
+            <p>Correct Answers: <span id="final-correct">0</span>/<span id="final-total">0</span></p>
+        </div>
+        <button id="review-test">Review Questions</button>
+        <button id="new-test">Start New Test</button>
+    </div>
+
+    <script>
+        // == Settings ==
+        const TEST_MODE_DURATION_SECONDS = 60 * 60; // 60 minutes
+
+        // Mapping of set keys to file names
+        const setFiles = {
+            set1: 'set1.json',
+            set2: 'set2.json',
+            set3: 'set3.json',
+            set4: 'set4.json',
+            set5: 'set5.json',
+            set6: 'set6.json'
+        };
+
+        // Variables to store question data and app state
+        let questionSets = {};
+        let activeQuestions = [];
+        let allQuestions = [];
+        let currentQuestion = 0;
+        let selectedOption = null;
+        let answered = [];
+        let correctAnswers = 0;
+        let currentMode = "practice";
+        let currentSet = "set1";
+        let timerInterval = null;
+        let timerSeconds = 0;
+
+        // DOM elements
+        const questionText = document.getElementById('question-text');
+        const optionsContainer = document.getElementById('options-container');
+        const resultDiv = document.getElementById('result');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const checkBtn = document.getElementById('check-btn');
+        const randomBtn = document.getElementById('random-btn');
+        const currentQuestionSpan = document.getElementById('current-question');
+        const questionCountSpan = document.getElementById('question-count');
+        const totalAnsweredSpan = document.getElementById('total-answered');
+        const totalQuestionsSpan = document.getElementById('total-questions');
+        const totalCorrectSpan = document.getElementById('total-correct');
+        const accuracySpan = document.getElementById('accuracy');
+        const modeSelect = document.getElementById('mode-select');
+        const setSelector = document.getElementById('set-selector');
+        const setSelect = document.getElementById('set-select');
+        const startTestBtn = document.getElementById('start-test');
+        const testCompleteDiv = document.getElementById('test-complete');
+        const finalScoreSpan = document.getElementById('final-score');
+        const finalCorrectSpan = document.getElementById('final-correct');
+        const finalTotalSpan = document.getElementById('final-total');
+        const reviewTestBtn = document.getElementById('review-test');
+        const newTestBtn = document.getElementById('new-test');
+        const timerDiv = document.getElementById('timer');
+
+        // Load all JSON sets for practice mode
+        function loadAllSets() {
+            const promises = Object.entries(setFiles).map(([setName, fileName]) =>
+                fetch(fileName).then(res => {
+                    if (!res.ok) throw new Error(`Failed to load ${fileName}`);
+                    return res.json().then(data => [setName, data]);
+                })
+            );
+            return Promise.all(promises).then(results => {
+                let setsObj = {};
+                results.forEach(([setName, data]) => {
+                    setsObj[setName] = data;
+                });
+                return setsObj;
+            });
+        }
+
+        // Load single set for test mode
+        function loadSet(setName) {
+            return fetch(setFiles[setName])
+                .then(res => {
+                    if (!res.ok) throw new Error(`Failed to load ${setFiles[setName]}`);
+                    return res.json();
+                });
+        }
+
+        // Initialize application
+        function init() {
+            modeSelect.addEventListener('change', handleModeChange);
+            startTestBtn.addEventListener('click', startTest);
+            reviewTestBtn.addEventListener('click', reviewTest);
+            newTestBtn.addEventListener('click', newTest);
+            checkBtn.addEventListener('click', checkAnswer);
+            prevBtn.addEventListener('click', prevQuestion);
+            nextBtn.addEventListener('click', nextQuestion);
+            randomBtn.addEventListener('click', randomQuestion);
+
+            handleModeChange();
+        }
+
+        // Handle mode switching (practice vs test)
+        function handleModeChange() {
+            currentMode = modeSelect.value;
+
+            // Show set selector for both modes
+            setSelector.style.display = 'block';
+
+            // Update button label
+            startTestBtn.textContent = currentMode === "practice" ? "Start Practice" : "Start Test";
+
+            // Show/hide random button
+            randomBtn.style.display = currentMode === "practice" ? 'inline-block' : 'none';
+
+            // Hide and stop timer
+            timerDiv.style.display = 'none';
+            stopTimer();
+
+            // If practice mode, load all sets by default
+            if (currentMode === "practice") {
+                loadAllSets().then(sets => {
+                    questionSets = sets;
+                    allQuestions = [];
+                    for (const set in questionSets) {
+                        allQuestions = allQuestions.concat(questionSets[set]);
+                    }
+                    initializeSession(allQuestions);
+                });
+            } else {
+                setSelector.style.display = 'block';
+                randomBtn.style.display = 'none';
+                timerDiv.style.display = 'none';
+                stopTimer();
+            }
+        }
+
+        // Start test mode (single set)
+        function startTest() {
+            currentSet = setSelect.value;
+            loadSet(currentSet).then(qs => {
+                activeQuestions = qs;
+                timerSeconds = 0;
+                updateTimerDisplay();
+                timerDiv.style.display = 'block';
+                startTimer();
+                initializeSession(activeQuestions);
+                testCompleteDiv.style.display = 'none';
+            });
+        }
+
+        // Initialize the session
+        function initializeSession(questionArray) {
+            activeQuestions = questionArray;
+            questionCountSpan.textContent = activeQuestions.length;
+            totalQuestionsSpan.textContent = activeQuestions.length;
+            answered = new Array(activeQuestions.length).fill(null);
+            correctAnswers = 0;
+            updateStats();
+            loadQuestion(0);
+            // Enable controls
+            enableQuestionControls();
+        }
+
+        // Load one question
+        function loadQuestion(index) {
+            if (index < 0 || index >= activeQuestions.length) return;
+            currentQuestion = index;
+            selectedOption = answered[index];
+            currentQuestionSpan.textContent = index + 1;
+
+            // Render question text and image (if provided)
+            let html = activeQuestions[index].question;
+            if (activeQuestions[index].image) {
+                html += `<br><img src="${activeQuestions[index].image}" alt="Question image" style="max-width:100%;margin:10px 0;">`;
+            }
+            questionText.innerHTML = html;
+
+            optionsContainer.innerHTML = '';
+            activeQuestions[index].options.forEach((option, i) => {
+                const optionElement = document.createElement('div');
+                optionElement.className = 'option';
+                if (selectedOption === i) {
+                    optionElement.classList.add('selected');
+                    if (answered[index] !== null) {
+                        if (i === activeQuestions[index].answer) {
+                            optionElement.classList.add('correct');
+                        } else {
+                            optionElement.classList.add('incorrect');
+                        }
+                    }
+                }
+                optionElement.innerHTML = `${String.fromCharCode(65 + i)}) ${option}`;
+                optionElement.addEventListener('click', () => selectOption(i));
+                optionsContainer.appendChild(optionElement);
+            });
+            resultDiv.style.display = 'none';
+            resultDiv.textContent = '';
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = false;
+            checkBtn.disabled = answered[index] !== null;
+            if (answered[index] !== null) {
+                showResult();
+            }
+        }
+        function selectOption(index) {
+            if (answered[currentQuestion] !== null) return;
+            selectedOption = index;
+            const options = optionsContainer.querySelectorAll('.option');
+            options.forEach(opt => opt.classList.remove('selected'));
+            options[index].classList.add('selected');
+            checkBtn.disabled = false;
+        }
+
+        function checkAnswer() {
+            if (selectedOption === null) return;
+            answered[currentQuestion] = selectedOption;
+            showResult();
+            updateStats();
+            checkBtn.disabled = true;
+            if (currentMode === "test" && isTestComplete()) {
+                completeTest(false);
+            }
+        }
+
+        function showResult() {
+            const correctAnswer = activeQuestions[currentQuestion].answer;
+            const options = optionsContainer.querySelectorAll('.option');
+            options.forEach((opt, i) => {
+                if (i === correctAnswer) opt.classList.add('correct');
+                else if (i === selectedOption && i !== correctAnswer) opt.classList.add('incorrect');
+            });
+            resultDiv.style.display = 'block';
+            if (selectedOption === correctAnswer) {
+                resultDiv.textContent = 'Correct!';
+                resultDiv.style.backgroundColor = '#d4edda';
+            } else {
+                resultDiv.textContent = `Incorrect. The correct answer is ${String.fromCharCode(65 + correctAnswer)}.`;
+                resultDiv.style.backgroundColor = '#f8d7da';
+            }
+        }
+
+        function updateStats() {
+            const answeredCount = answered.filter(a => a !== null).length;
+            correctAnswers = answered.reduce((sum, ans, i) => sum + (ans === activeQuestions[i].answer ? 1 : 0), 0);
+            totalAnsweredSpan.textContent = answeredCount;
+            totalCorrectSpan.textContent = correctAnswers;
+            accuracySpan.textContent = answeredCount > 0 ? `${Math.round((correctAnswers / answeredCount) * 100)}%` : '0%';
+        }
+
+        function isTestComplete() {
+            return answered.every(a => a !== null);
+        }
+
+        function completeTest(timedOut = false) {
+            stopTimer();
+            testCompleteDiv.style.display = 'block';
+            const score = Math.round((correctAnswers / activeQuestions.length) * 100);
+            finalScoreSpan.textContent = score;
+            finalCorrectSpan.textContent = correctAnswers;
+            finalTotalSpan.textContent = activeQuestions.length;
+            // If timed out, show special message
+            if (timedOut) {
+                testCompleteDiv.querySelector("h2").textContent = "Time's Up! Test Complete!";
+            } else {
+                testCompleteDiv.querySelector("h2").textContent = "Test Complete!";
+            }
+            // Disable question controls after test is complete
+            disableQuestionControls();
+        }
+
+        function reviewTest() {
+            testCompleteDiv.style.display = 'none';
+            enableQuestionControls();
+            loadQuestion(0);
+        }
+
+        function newTest() {
+            testCompleteDiv.style.display = 'none';
+            enableQuestionControls();
+            handleModeChange();
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) loadQuestion(currentQuestion - 1);
+        }
+        function nextQuestion() {
+            if (currentQuestion < activeQuestions.length - 1) loadQuestion(currentQuestion + 1);
+            else if (currentMode === "test" && isTestComplete()) completeTest(false);
+        }
+        function randomQuestion() {
+            const randomIndex = Math.floor(Math.random() * activeQuestions.length);
+            loadQuestion(randomIndex);
+        }
+
+        // Timer (test mode only)
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                timerSeconds++;
+                updateTimerDisplay();
+                // Only enforce limit in Test Mode
+                if (currentMode === "test" && timerSeconds >= TEST_MODE_DURATION_SECONDS) {
+                    stopTimer();
+                    completeTest(true); // true = timed out
+                }
+            }, 1000);
+        }
+        function stopTimer() {
+            if (timerInterval) clearInterval(timerInterval);
+            timerInterval = null;
+        }
+        function updateTimerDisplay() {
+            let displaySeconds;
+            if (currentMode === "test") {
+                displaySeconds = Math.max(0, TEST_MODE_DURATION_SECONDS - timerSeconds);
+            } else {
+                displaySeconds = timerSeconds;
+            }
+            const minutes = Math.floor(displaySeconds / 60).toString().padStart(2, '0');
+            const seconds = (displaySeconds % 60).toString().padStart(2, '0');
+            timerDiv.textContent = `Time: ${minutes}:${seconds}`;
+        }
+
+        function disableQuestionControls() {
+            checkBtn.disabled = true;
+            nextBtn.disabled = true;
+            prevBtn.disabled = true;
+            randomBtn.disabled = true;
+        }
+        function enableQuestionControls() {
+            checkBtn.disabled = false;
+            nextBtn.disabled = false;
+            prevBtn.disabled = false;
+            randomBtn.disabled = false;
+        }
+
+        // Start app!
+        init();
+    </script>
+</body>
+
+</html>

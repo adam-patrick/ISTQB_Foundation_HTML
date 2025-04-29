@@ -1,0 +1,405 @@
+[
+  {
+    "question": "In what way does root cause analysis contribute to quality assurance?",
+    "options": [
+      "Helps to better identify and correct the root cause of defects",
+      "Outlines how development teams can code faster",
+      "Specifies the desired root causes to be achieved by other teams",
+      "Contributes to the justification of future project funding"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "You are working in an Agile team where the testers are being accused of slowing down the process because of the time system testing is taking. Which of the following would be an approach that would better spread the skills of the team to complete the tasks?",
+    "options": [
+      "Whole Team",
+      "Team Split",
+      "Behavior-Driven Development",
+      "Waterfall"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which of the following is an example of debugging?",
+    "options": [
+      "A tester finds a defect and reports it",
+      "A tester retests a fix from the developer and finds a regression",
+      "A developer finds and fixes a defect",
+      "A developer performs unit testing"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which of the following is a true statement about exhaustive testing?",
+    "options": [
+      "It is a form of stress testing",
+      "It is not feasible except in the case of trivial software",
+      "It is commonly done with test automation",
+      "It is normally the responsibility of the developer during unit testing"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "If you need to provide a report showing test case execution coverage of the requirements, what do you need to track?",
+    "options": [
+      "Traceability between the test cases and the requirements",
+      "Coverage of the risk items by test case",
+      "Traceability between the requirements and the risk items",
+      "Coverage of the requirements by the test cases that have been designed"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Who normally writes the test plan for a project?",
+    "options": [
+      "The project manager",
+      "The product owner",
+      "The test manager",
+      "The tester"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Your team has conducted a quality risk analysis and has determined the likelihood, impact and mitigation plan for each identified risk. This information should be captured in what work product?",
+    "options": [
+      "Test strategy",
+      "Test plan",
+      "Risk register",
+      "Risk plan"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "You are working with a junior tester who has been given a user story to test. They have created only one positive path test for the story. You know there are more areas that should be tested for this story, including negative scenarios. Which of the following generic skills do they appear to be lacking?",
+    "options": [
+      "Communication",
+      "Curiosity",
+      "Confidence",
+      "Creativity"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Which of the following is an example of a good testing practice?",
+    "options": [
+      "Different test levels should have specific test objectives",
+      "Testers should have development experience",
+      "Developers should determine the order of test execution in the test procedures",
+      "Test design should begin when the code is complete to avoid changes"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which development approach captures the requirements in a simple test case format?",
+    "options": [
+      "TDD",
+      "BDD",
+      "ATDD",
+      "TBD"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Usability testing is an example of which type of testing?",
+    "options": [
+      "Functional",
+      "Non-functional",
+      "Structural",
+      "Change-related"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "You have been receiving daily builds from the developers. Even though they are documenting the fixes they are including in each build, you are finding that the fixes either aren’t in the build or are not working. What type of testing is best suited for finding these issues?",
+    "options": [
+      "Unit testing",
+      "System testing",
+      "Confirmation testing",
+      "Regression testing"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Your team has just completed a retrospective. They have discussed what was successful and should be retained, and they discussed what improvements are needed. What else do they need to discuss in order to recognize process improvements?",
+    "options": [
+      "What will be retained or changed for the future",
+      "Who is to blame for the shortcomings of the project",
+      "How much money was spent that could have been saved",
+      "Why changes were not made earlier in the project"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Your organization has decided to implement DevOps. One of the biggest concerns from the operations people is that there have been ongoing performance issues in production. How will implementing DevOps and CI/CD help with this problem?",
+    "options": [
+      "It won’t - the problem needs to be addressed during design",
+      "Performance testing can be integrated into the CI/CD pipeline to test it incrementally and repeatedly throughout development",
+      "Performance testing will be the main focus of the system integration testing, after the code has been delivered to the test environment",
+      "Performance testing experts will be used to conduct the performance testing in an isolated environment which is developed using Infrastructure as Code"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which of the following techniques is a form of static testing?",
+    "options": [
+      "Error guessing",
+      "Automated regression testing",
+      "Providing inputs and examining the resulting outputs",
+      "Code review"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "You are frequently asked to participate in reviews of requirements. Unfortunately, you usually receive the document to be reviewed the night before the review meeting will be held. This is resulting in your not doing a thorough review and having to work significant overtime to get the review done. What review success factor is missing from this process?",
+    "options": [
+      "Management support for the overall review process",
+      "Reviewing only small chunks at a time",
+      "Training for the proper performance in the meetings",
+      "Allowing adequate time to conduct the review"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What is the main difference between static and dynamic testing?",
+    "options": [
+      "Static testing is performed by developers; dynamic testing is performed by testers",
+      "Manual test cases are used for dynamic testing; automated tests are used for static testing",
+      "Static testing must be executed before dynamic testing",
+      "Dynamic testing requires executing the software; the software is not executed during static testing"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "If a review session is led by the author of the work product, what type of review is it?",
+    "options": [
+      "Ad hoc",
+      "Walkthrough",
+      "Inspection",
+      "Audit"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "If test cases are derived from looking at the code, what type of test design technique is being used?",
+    "options": [
+      "Black-box",
+      "White-box",
+      "Specification-based",
+      "Behavior-based"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "How is statement coverage determined?",
+    "options": [
+      "Number of test decision points divided by the number of test cases",
+      "Number of branches tested divided by the total number of executable statements",
+      "Number of possible test case outcomes divided by the total number of function points",
+      "Number of executable statements tested divided by the total number of executable statements"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "You are working on a project with very tight deadlines. The code is being developed but is not yet executable. What type of testing could you apply that would help find defects now?",
+    "options": [
+      "Black-box",
+      "White-box",
+      "Experience-based",
+      "Factor-based"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "If you are using error guessing to target your testing, which type of testing are you doing?",
+    "options": [
+      "Specification-based",
+      "Structure-based",
+      "Experience-based",
+      "Reference-based"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "When exploratory testing is conducted using time-boxing and test charters, what is it called?",
+    "options": [
+      "Schedule-based testing",
+      "Session-based testing",
+      "Risk-based testing",
+      "Formal chartering"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "You are writing some acceptance criteria for a story. You have decided to make a list of all the likely inputs to the code and the expected outputs based on those inputs. What format are you using?",
+    "options": [
+      "IPO chart",
+      "Acceptance-based",
+      "Rules-oriented",
+      "Behavior-driven"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "You are testing a banking application that allows a customer to withdraw 20, 100 or 500 dollars in a single transaction. The values are chosen from a drop-down list and no other values may be entered. How many equivalence partitions need to be tested to achieve 100% equivalence partition coverage?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "You are testing a scale system that determines shipping rates for a regional web-based auto parts distributor. Due to regulations, shipments cannot exceed 100 lbs. You want to include boundary value analysis as part of your black-box test design. How many tests will you need to execute to achieve 100% two-value boundary value analysis?",
+    "image": "images/ctfl4_26.png",
+    "options": [
+      "4",
+      "8",
+      "10",
+      "12"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which of the following is the correct decision table for the following pseudocode for ordering a hamburger?",
+    "image": "images/ctfl4_27.png",
+    "options": [
+      "<b></b> <img src=\"/images/ctfl4_27_a.png\" alt=\"27a\" style=\"max-width:400px; height:auto;\" /><br>",
+      "<b></b> <img src=\"/images/ctfl4_27_b.png\" alt=\"27b\" style=\"max-width:400px; height:auto;\" /><br>",
+      "<b></b> <img src=\"/images/ctfl4_27_c.png\" alt=\"27c\" style=\"max-width:400px; height:auto;\" /><br>",
+      "<b></b> <img src=\"/images/ctfl4_27_d.png\" alt=\"27d\" style=\"max-width:400px; height:auto;\" /><br>"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "You are testing an e-commerce transaction that has the following states and transitions:<ul style=\"margin-top:0;\"><li>1. Login (invalid) &gt; Login</li><li>2. Login &gt; Search</li><li>3. Search &gt; Search</li><li>4. Search &gt; Shopping Cart</li><li>5. Shopping Cart &gt; Search</li><li>6. Shopping Cart &gt; Checkout</li><li>7. Checkout &gt; Search</li><li>8. Checkout &gt; Logout</li></ul>For a state transition diagram, how many transitions should be shown?",
+    "options": [
+      "4",
+      "6",
+      "8",
+      "16"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "You are creating test cases for the following story, applying the ATDD approach:<br>As a hotel owner<br>I want to reserve all the rooms on a floor before moving to the next floor<br>So I can maximize the efficiency of the housekeeping staff.<br>You have decided to apply boundary value analysis to this requirement and have identified the following partitions for the occupancy of a floor:<ul style=\"margin-top:0;\"><li>0</li><li>1 - floor full</li><li>overbooked</li></ul>You have designed the following test cases:<ul style=\"margin-top:0;\"><li>Test with 1 occupant on the floor</li><li>Test with the floor full and ensure the next floor is made available for bookings</li><li>Test with 0 occupants on the floor and ensure that floor is only available when lower floors are fully booked</li><li>Test the usability to ensure hotel staff will find the software usable</li><li>Test for response time when the system is at average load and the hotel is 80% occupied</li></ul>What are you missing?",
+    "options": [
+      "A test with a floor partially occupied but not fully occupied",
+      "A test for performance",
+      "A test for trying to assign someone to a floor that is full",
+      "A test for usability"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Level of risk is determined by which of the following?",
+    "options": [
+      "Likelihood and impact",
+      "Priority and risk rating",
+      "Probability and practicality",
+      "Risk identification and mitigation"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which of the following is an example of a good exit criterion from system testing?",
+    "options": [
+      "All tests should be completed",
+      "The project budget should be spent",
+      "All defects should be fixed",
+      "All severity 1 defects must be resolved"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "You are working on a project and have determined that exploratory testing is the best test technique to apply. Which testing quadrant are you using?",
+    "options": [
+      "Q1",
+      "Q2",
+      "Q3",
+      "Q4"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which of the following is a project risk?",
+    "options": [
+      "A defect that is causing a performance issue",
+      "A duplicate requirement",
+      "An issue with a data conversion procedure",
+      "A schedule that requires work during Christmas shutdown"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "You have just completed testing on a major ERP implementation. The project has taken two years and is now ready for final approval before go-live. What test documentation should be produced at this time?",
+    "options": [
+      "Formal test summary report",
+      "Testing team task board",
+      "Email to the team congratulating them on their success",
+      "Burn down chart"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "You are working on a project that is releasing software to the test team in iterations. In iteration 3 you identified a failure. The developer found and fixed the defect and released the fix in iteration 4. You confirmed the fix and closed the defect report. You are now testing iteration 7 and the failure has occurred again. You have talked to the developer and he doesn’t know how or when the failure came back and has asked you to investigate. How can configuration management help you gather more information on this failure?",
+    "options": [
+      "You can see what changed in iteration 4 to fix the problem",
+      "You can reload and retest iterations 5 and 6 to see where the problem was re-introduced",
+      "You can review all the code changes that have occurred since iteration 4 to see what might have broken it",
+      "You can improve the regression testing to ensure the failure is caught earlier"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "You are estimating the testing time required for a new project. You have gathered information from three experts and they have given you the following numbers in days:<br><table border=\"1\" cellpadding=\"2\" style=\"border-collapse:collapse\"><tr><th></th><th>Optimistic</th><th>Likely</th><th>Pessimistic</th></tr><tr><td>Expert 1</td><td>20</td><td>40</td><td>60</td></tr><tr><td>Expert 2</td><td>40</td><td>55</td><td>75</td></tr><tr><td>Expert 3</td><td>30</td><td>70</td><td>90</td></tr><tr><td>Average</td><td>30</td><td>55</td><td>75</td></tr></table><br>Using the average numbers from the table above and applying the three-point estimation technique, what is the estimate?",
+    "options": [
+      "325 ± 45",
+      "81.25 ± 8",
+      "54.17 ± 7.5",
+      "40 ± 2"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Given this information, what is the proper order in which to execute these test cases?",
+    "image": "images/ctfl4_37.png",
+    "options": [
+      "5, 1, 3, 2, 4",
+      "1, 2, 4, 5, 3",
+      "1, 3, 2, 4, 5",
+      "3, 4, 5, 1, 2"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "You have received the following description section in a defect report:\nThe report executed per the attached steps, but the data was incorrect. For example, the information in column 1 was wrong. See the attached screenshot. This report is critical to the users and they will be unable to do their jobs without this information. What is the biggest problem with this defect report?",
+    "options": [
+      "The developer won’t know how important the problem is",
+      "The developer won’t know how to repeat the test",
+      "The developer won’t be able to see what the tester is saying is wrong",
+      "The developer won’t know what the tester expected to see"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What is the primary purpose of a test execution tool?",
+    "options": [
+      "It runs automated test scripts to test the test object",
+      "It automatically records defects in the defect tracking system",
+      "It analyzes code to determine if there are any coding standard violations",
+      "It tracks test cases, defects and requirements traceability"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which of the following is a risk with test automation?",
+    "options": [
+      "Using an automation tool that will not be supported in the future",
+      "Developing test automation for particularly tedious manual testing areas",
+      "Using technical testers to implement the automation",
+      "Developing automated reporting"
+    ],
+    "answer": 0
+  }
+]

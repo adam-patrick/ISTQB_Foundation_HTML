@@ -1,0 +1,402 @@
+[
+    {
+        "question": "A deviation from the specified or expected behavior that is visible to end-users is called:",
+        "options": [
+            "an error",
+            "a fault",
+            "a failure",
+            "a defect"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Regression testing should be performed:",
+        "options": [
+            "every week",
+            "after the software has changed",
+            "as often as possible",
+            "when the environment has changed"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "IEEE 829 test plan documentation standard contains all of the following except",
+        "options": [
+            "test items",
+            "test deliverables",
+            "test tasks",
+            "test specifications"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "When should testing be stopped?",
+        "options": [
+            "when all the planned tests have been run",
+            "when time has run out",
+            "when all faults have been fixed correctly",
+            "it depends on the risks for the system being tested"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Order numbers on a stock control system can range between 10000 and 99999 inclusive. Which of the following inputs might be a result of designing tests for only valid equivalence classes and valid boundaries?",
+        "options": [
+            "1000, 50000, 99999",
+            "9999, 50000, 100000",
+            "10000, 50000, 99999",
+            "10000, 99999, 100000"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Consider the following statements about early test design:\ni. early test design can prevent fault multiplication\nii. faults found during early test design are more expensive to fix\niii. early test design can find faults\niv. early test design can cause changes to the requirements\nv. early test design normally takes more effort",
+        "options": [
+            "i, iii & iv are true; ii & v are false",
+            "iii & iv are true; i, ii & v are false",
+            "i, iii, iv & v are true; ii is false",
+            "i & ii are true; iii, iv & v are false"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Non-functional system testing includes:",
+        "options": [
+            "testing to see where the system does not function correctly",
+            "testing quality attributes of the system including performance and usability",
+            "testing a system function using only the software required for that function",
+            "testing for functions that should not exist"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Which of the following is NOT part of configuration management?",
+        "options": [
+            "auditing conformance to ISO 9000",
+            "status accounting of configuration items",
+            "identification of test versions",
+            "controlled library access"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Which of the following is the main purpose of the integration strategy for integration testing in the small?",
+        "options": [
+            "to ensure that all of the small modules are tested adequately",
+            "to ensure that the system interfaces to other systems and networks",
+            "to specify which modules to combine when, and how many at once",
+            "to specify how the software should be divided into modules"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "What is the purpose of a test completion criterion?",
+        "options": [
+            "to know when a specific test has finished its execution",
+            "to ensure that the test case specification is complete",
+            "to set the criteria used in generating test inputs",
+            "to determine when to stop testing"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Consider the following statements:\ni. an incident may be closed without being fixed.\nii. incidents may not be raised against documentation.\niii. the final stage of incident tracking is fixing.\niv. the incident record does not include information on test environments.",
+        "options": [
+            "ii is true, i, iii and iv are false",
+            "i is true, ii, iii and iv are false",
+            "i and iv are true, ii and iii are false",
+            "i and ii are true, iii and iv are false"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Given the following code, which statement is true about the minimum number of test cases required for full statement and branch coverage?\nRead p\nRead q\nIF p+q > 100 THEN\nPrint 'Large'\nENDIF\nIF p > 50 THEN\nPrint 'p Large'\nENDIF",
+        "options": [
+            "1 test for statement coverage, 3 for branch coverage",
+            "1 test for statement coverage, 2 for branch coverage",
+            "1 test for statement coverage, 1 for branch coverage",
+            "2 tests for statement coverage, 2 for branch coverage"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Consider the following statements:\ni. 100% statement coverage guarantees 100% branch coverage.\nii. 100% branch coverage guarantees 100% statement coverage.\niii. 100% branch coverage guarantees 100% decision coverage.\niv. 100% decision coverage guarantees 100% branch coverage.\nv. 100% statement coverage guarantees 100% decision coverage.",
+        "options": [
+            "ii is True; i, iii, iv & v are False",
+            "i & v are True; ii, iii & iv are False",
+            "ii & iii are True; i, iv & v are False",
+            "ii, iii & iv are True; i & v are False"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Functional system testing is:",
+        "options": [
+            "testing that the system functions with other systems",
+            "testing that the components that comprise the system function together",
+            "testing the end to end functionality of the system as a whole",
+            "testing the system performs functions within specified response times"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Incidents would not be raised against:",
+        "options": [
+            "requirements",
+            "documentation",
+            "test cases",
+            "improvements suggested by users"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Which of the following items would not come under Configuration Management?",
+        "options": [
+            "operating systems",
+            "test documentation",
+            "live data",
+            "user requirement documents"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Maintenance testing is:",
+        "options": [
+            "updating tests when the software has changed",
+            "testing a released system that has been changed",
+            "testing by users to ensure that the system meets a business need",
+            "testing to maintain business advantage"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "What can static analysis NOT find?",
+        "options": [
+            "the use of a variable before it has been defined",
+            "unreachable ('dead') code",
+            "memory leaks",
+            "array bound violations"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which of the following techniques is NOT a black box technique?",
+        "options": [
+            "state transition testing",
+            "LCSAJ",
+            "syntax testing",
+            "boundary value analysis"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Beta testing is:",
+        "options": [
+            "performed by customers at their own site",
+            "performed by customers at the software developer's site",
+            "performed by an Independent Test Team",
+            "performed as early as possible in the lifecycle"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Given the following types of tool, which tools would typically be used by developers, and which by an independent system test team?\ni. static analysis\nii. performance testing\niii. test management\niv. dynamic analysis",
+        "options": [
+            "developers would typically use i and iv; test team ii and iii",
+            "developers would typically use i and iii; test team ii and iv",
+            "developers would typically use ii and iv; test team i and iii",
+            "developers would typically use i, iii and iv; test team ii"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "The main focus of acceptance testing is:",
+        "options": [
+            "finding faults in the system",
+            "ensuring that the system is acceptable to all users",
+            "testing the system with other systems",
+            "testing from a business perspective"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Which of the following statements about component testing is FALSE?",
+        "options": [
+            "black box test design techniques all have an associated test measurement technique",
+            "white box test design techniques all have an associated test measurement technique",
+            "cyclomatic complexity is not a test measurement technique",
+            "black box test measurement techniques all have an associated test design technique"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Which of the following statements is NOT true?",
+        "options": [
+            "inspection is the most formal review process",
+            "inspections should be led by a trained leader",
+            "managers can perform inspections on management documents",
+            "inspection is appropriate even when there are no written documents"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "A typical commercial test execution tool would be able to perform all of the following, EXCEPT:",
+        "options": [
+            "calculating expected outputs",
+            "comparison of expected outcomes with actual outcomes",
+            "recording test inputs",
+            "reading test values from a data file"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "The difference between re-testing and regression testing is:",
+        "options": [
+            "re-testing ensures the original fault has been removed; regression testing looks for unexpected side-effects",
+            "re-testing looks for unexpected side-effects; regression testing ensures the original fault has been removed",
+            "re-testing is done after faults are fixed; regression testing is done earlier",
+            "re-testing is done by developers; regression testing is done by independent testers"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Expected results are:",
+        "options": [
+            "only important in system testing",
+            "only used in component testing",
+            "most useful when specified in advance",
+            "derived from the code"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "What type of review requires formal entry and exit criteria, including metrics:",
+        "options": [
+            "walkthrough",
+            "inspection",
+            "management review",
+            "post project review"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Which of the following uses Impact Analysis most?",
+        "options": [
+            "component testing",
+            "non-functional system testing",
+            "user acceptance testing",
+            "maintenance testing"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "What is NOT included in typical costs for an inspection process?",
+        "options": [
+            "setting up forms and databases",
+            "analyzing metrics and improving processes",
+            "writing the documents to be inspected",
+            "time spent on the document outside the meeting"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which of the following is NOT a reasonable test objective:",
+        "options": [
+            "to find faults in the software",
+            "to prove that the software has no faults",
+            "to give confidence in the software",
+            "to find performance problems"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Which expression best matches the following characteristics of the review processes:\n1. led by the author\n2. undocumented\n3. no management participation\n4. led by a moderator or leader\n5. uses entry and exit criteria\ns) inspection\nt) peer review\nu) informal review\nv) walkthrough",
+        "options": [
+            "s = 4 and 5, t = 3, u = 2, v = 1",
+            "s = 4, t = 3, u = 2 and 5, v = 1",
+            "s = 1 and 5, t = 3, u = 2, v = 4",
+            "s = 4 and 5, t = 1, u= 2, v = 3"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Which of the following is NOT part of system testing?",
+        "options": [
+            "business process-based testing",
+            "performance, load and stress testing",
+            "usability testing",
+            "top-down integration testing"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Which statement about expected outcomes is FALSE?",
+        "options": [
+            "expected outcomes are defined by the software's behavior",
+            "expected outcomes are derived from a specification, not from the code",
+            "expected outcomes should be predicted before a test is run",
+            "expected outcomes may include timing constraints such as response times"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "The standard that gives definitions of testing terms is:",
+        "options": [
+            "ISO/IEC 12207",
+            "BS 7925-1",
+            "ANSI/IEEE 829",
+            "ANSI/IEEE 729"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "The cost of fixing a fault:",
+        "options": [
+            "is not important",
+            "increases the later a fault is found",
+            "decreases the later a fault is found",
+            "can never be determined"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Which of the following is NOT included in the Test Plan document of the Test Documentation Standard?",
+        "options": [
+            "what is not to be tested",
+            "test environment properties",
+            "quality plans",
+            "schedules and deadlines"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Could reviews or inspections be considered part of testing?",
+        "options": [
+            "no, because they apply to development documentation",
+            "no, because they are normally applied before testing",
+            "yes, because both help detect faults and improve quality",
+            "yes, because testing includes all non-constructive activities"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which of the following is not part of performance testing?",
+        "options": [
+            "measuring response times",
+            "recovery testing",
+            "simulating many users",
+            "generating many transactions"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Error guessing is best used:",
+        "options": [
+            "after more formal techniques have been applied",
+            "as the first approach to deriving test cases",
+            "by inexperienced testers",
+            "after the system has gone live"
+        ],
+        "answer": 0
+    }
+]
