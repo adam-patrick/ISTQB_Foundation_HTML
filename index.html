@@ -3,139 +3,438 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>ISTQB Quiz</title>
+    <title>ISTQB Certification Quiz</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
+        :root {
+            --primary: #4361ee;
+            --primary-light: #4895ef;
+            --primary-dark: #3f37c9;
+            --secondary: #f72585;
+            --success: #4cc9f0;
+            --danger: #f72585;
+            --warning: #f8961e;
+            --info: #90e0ef;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --gray-light: #e9ecef;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
+            font-family: 'Segoe UI', Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 2rem;
             line-height: 1.6;
+            color: var(--dark);
+            background-color: #f5f7fa;
+        }
+
+        header {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-dark);
+        }
+
+        .subtitle {
+            color: var(--gray);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
         }
 
         .card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
         }
 
         .options {
-            margin-top: 10px;
+            margin-top: 1.5rem;
         }
 
         .option {
-            margin: 8px 0;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            margin: 0.8rem 0;
+            padding: 1rem 1.5rem;
+            border: 2px solid var(--gray-light);
+            border-radius: var(--border-radius);
             cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
         }
 
         .option:hover {
-            background-color: #f5f5f5;
+            background-color: var(--light);
+            transform: translateY(-2px);
+        }
+
+        .option .option-marker {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: var(--gray-light);
+            color: var(--dark);
+            margin-right: 1rem;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+
+        .option .option-text {
+            flex: 1;
         }
 
         .selected {
-            background-color: #e0e0ff;
+            border-color: var(--primary);
+            background-color: rgba(67, 97, 238, 0.05);
+        }
+
+        .selected .option-marker {
+            background-color: var(--primary);
+            color: white;
         }
 
         .correct {
-            background-color: #d4edda;
-            border-color: #c3e6cb;
+            border-color: var(--success);
+            background-color: rgba(76, 201, 240, 0.1);
+        }
+
+        .correct .option-marker {
+            background-color: var(--success);
+            color: white;
         }
 
         .incorrect {
-            background-color: #f8d7da;
-            border-color: #f5c6cb;
+            border-color: var(--danger);
+            background-color: rgba(247, 37, 133, 0.1);
+        }
+
+        .incorrect .option-marker {
+            background-color: var(--danger);
+            color: white;
         }
 
         .result {
-            margin-top: 15px;
-            padding: 10px;
-            border-radius: 4px;
+            margin-top: 1.5rem;
+            padding: 1rem;
+            border-radius: var(--border-radius);
             display: none;
+            font-weight: 500;
         }
 
         .controls {
             display: flex;
             justify-content: space-between;
-            margin-top: 20px;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
         button {
-            padding: 10px 15px;
+            padding: 0.8rem 1.5rem;
             border: none;
-            border-radius: 4px;
-            background-color: #4A90E2;
+            border-radius: var(--border-radius);
+            background-color: var(--primary);
             color: white;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
 
         button:hover {
-            background-color: #357ABD;
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
         }
 
         button:disabled {
-            background-color: #cccccc;
+            background-color: var(--gray-light);
+            color: var(--gray);
             cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-check {
+            background-color: var(--success);
+        }
+
+        .btn-check:hover {
+            background-color: #3daed0;
+        }
+
+        .btn-random {
+            background-color: var(--warning);
+        }
+
+        .btn-random:hover {
+            background-color: #e57c0d;
         }
 
         .progress {
-            margin-bottom: 20px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background-color: var(--gray-light);
+            border-radius: 4px;
+            overflow: hidden;
+            flex: 1;
+            margin: 0 1rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: var(--primary);
+            width: 0%;
+            transition: width 0.5s ease;
         }
 
         .stats {
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
+            justify-content: space-around;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .stat-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 1rem 1.5rem;
+            text-align: center;
+            min-width: 120px;
+            box-shadow: var(--box-shadow);
+            flex: 1;
+        }
+
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 0.5rem 0;
+        }
+
+        .stat-label {
+            color: var(--gray);
+            font-size: 0.9rem;
         }
 
         .mode-selector {
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--box-shadow);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
         }
 
-        .mode-selector select,
-        .mode-selector button {
-            margin-right: 10px;
+        .mode-selector select {
+            padding: 0.8rem;
+            border: 2px solid var(--gray-light);
+            border-radius: 8px;
+            font-size: 1rem;
+            background-color: white;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .option-group {
+            margin-top: 0.5rem;
+            font-weight: bold;
+            color: var(--gray);
         }
 
         .test-complete {
             text-align: center;
-            padding: 20px;
-            background-color: #d4edda;
-            border-radius: 8px;
-            margin-top: 20px;
+            padding: 2rem;
+            background-color: white;
+            border-radius: var(--border-radius);
+            margin-top: 2rem;
             display: none;
+            box-shadow: var(--box-shadow);
+        }
+
+        .test-complete h2 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        .test-complete .result-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 1rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
+            position: relative;
+        }
+
+        .test-complete .result-details {
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
         }
 
         .timer {
-            font-size: 18px;
+            background-color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--border-radius);
+            font-size: 1.2rem;
             font-weight: bold;
-            margin-bottom: 10px;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--box-shadow);
         }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .stats {
+                flex-direction: column;
+            }
+
+            .controls {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+
+        /* For small phone screens */
+        @media (max-width: 480px) {
+            .option {
+                padding: 0.8rem;
+            }
+
+            .option .option-marker {
+                width: 28px;
+                height: 28px;
+                font-size: 0.9rem;
+            }
+
+            .stat-card {
+                min-width: 100%;
+            }
+        }
+
+        /* Dark mode support for user preference */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #4361ee;
+                --primary-light: #4895ef;
+                --primary-dark: #3f37c9;
+                --secondary: #f72585;
+                --success: #4cc9f0;
+                --danger: #f72585;
+                --warning: #f8961e;
+                --info: #90e0ef;
+                --light: #2a2d3e;
+                --dark: #e9ecef;
+                --gray: #9ca3af;
+                --gray-light: #374151;
+            }
+
+            body {
+                background-color: #121212;
+                color: var(--dark);
+            }
+
+            .card, .mode-selector, .stat-card, .test-complete, .timer {
+                background-color: #1e1e1e;
+                color: var(--dark);
+            }
+
+            .option {
+                border-color: var(--gray-light);
+                color: var(--dark);
+            }
+
+            .option:hover {
+                background-color: var(--light);
+            }
+
+            .option .option-marker {
+                background-color: var(--gray-light);
+                color: var(--dark);
+            }
+
+            select {
+                background-color: #1e1e1e;
+                color: var(--dark);
+                border-color: var(--gray-light);
+            }
+        }
+
+        /* Timer warning animation */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
     </style>
 </head>
 
 <body>
-    <h1>ISTQB Quiz Application</h1>
+    <header>
+        <h1>ISTQB Certification Quiz</h1>
+        <p class="subtitle">Test your software testing knowledge</p>
+    </header>
 
     <div class="mode-selector">
         <div>
-            <label for="mode-select">Mode: </label>
+            <label for="mode-select">Select Mode:</label>
             <select id="mode-select">
-                <option value="practice">Practice (All Questions)</option>
-                <option value="test">Test (By Sets)</option>
+                <option value="practice">Practice Mode</option>
+                <option value="test">Exam Mode (Timed)</option>
             </select>
         </div>
-        <div id="set-selector" style="margin-top: 10px; display: none;">
-            <label for="set-select">Select Set: </label>
+        <div id="set-selector" style="margin-top: 10px;">
+            <label for="set-select">Select Question Set:</label>
             <select id="set-select">
                 <optgroup label="SoftwareTestingHelp Exams">
                     <option value="set1">Set 1 – Exam A</option>
@@ -146,24 +445,39 @@
                     <option value="set4">Set 4 – CTFL Sample 1</option>
                     <option value="set5">Set 5 – CTFL Sample 2</option>
                 </optgroup>
-                <optgroup label="CTFL Sample Exams">
+                <optgroup label="ISTQB Sample Exams">
                     <option value="set6">Set 6 – ISTQB Sample Exam B</option>
                 </optgroup>
             </select>
-            <button id="start-test">Start Test</button>
+            <button id="start-test"><i class="fas fa-play"></i> Start Practice</button>
         </div>
     </div>
 
-    <div id="timer" class="timer" style="display: none;">Time: 00:00</div>
+    <div id="timer" class="timer" style="display: none;">
+        <i class="fas fa-clock"></i> Time Remaining: <span id="timer-display">60:00</span>
+    </div>
 
     <div class="stats">
-        <div>Questions: <span id="total-answered">0</span>/<span id="total-questions">0</span></div>
-        <div>Correct: <span id="total-correct">0</span></div>
-        <div>Accuracy: <span id="accuracy">0%</span></div>
+        <div class="stat-card">
+            <div class="stat-label">Progress</div>
+            <div class="stat-value"><span id="total-answered">0</span>/<span id="total-questions">0</span></div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Correct Answers</div>
+            <div class="stat-value"><span id="total-correct">0</span></div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Accuracy</div>
+            <div class="stat-value"><span id="accuracy">0%</span></div>
+        </div>
     </div>
 
     <div class="progress">
-        <div>Question <span id="current-question">1</span> of <span id="question-count">0</span></div>
+        <span>Question <span id="current-question">1</span> of <span id="question-count">0</span></span>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <span id="progress-percentage">0%</span>
     </div>
 
     <div class="card" id="question-card">
@@ -173,27 +487,30 @@
     </div>
 
     <div class="controls">
-        <button id="prev-btn" disabled>Previous</button>
-        <button id="check-btn">Check Answer</button>
-        <button id="next-btn">Next</button>
-        <button id="random-btn">Random Question</button>
+        <button id="prev-btn" disabled><i class="fas fa-arrow-left"></i> Previous</button>
+        <button id="check-btn" class="btn-check"><i class="fas fa-check-circle"></i> Check Answer</button>
+        <button id="next-btn"><i class="fas fa-arrow-right"></i> Next</button>
+        <button id="random-btn" class="btn-random"><i class="fas fa-random"></i> Random</button>
     </div>
 
     <div class="test-complete" id="test-complete">
         <h2>Test Complete!</h2>
-        <div id="test-results">
-            <p>Score: <span id="final-score">0</span>%</p>
-            <p>Correct Answers: <span id="final-correct">0</span>/<span id="final-total">0</span></p>
+        <div class="result-circle" id="result-circle">0%</div>
+        <div class="result-details">
+            <p>You answered <span id="final-correct">0</span> out of <span id="final-total">0</span> questions correctly.</p>
+            <p>Your final score is <span id="final-score">0%</span></p>
         </div>
-        <button id="review-test">Review Questions</button>
-        <button id="new-test">Start New Test</button>
+        <div class="controls">
+            <button id="review-test"><i class="fas fa-search"></i> Review Answers</button>
+            <button id="new-test"><i class="fas fa-redo"></i> Start New Test</button>
+        </div>
     </div>
 
     <script>
         // == Settings ==
         const TEST_MODE_DURATION_SECONDS = 60 * 60; // 60 minutes
 
-        // Mapping of set keys to file names
+        // Mapping set keys to file names
         const setFiles = {
             set1: 'set1.json',
             set2: 'set2.json',
@@ -203,7 +520,7 @@
             set6: 'set6.json'
         };
 
-        // Variables to store question data and app state
+        // Variables/State
         let questionSets = {};
         let activeQuestions = [];
         let allQuestions = [];
@@ -216,7 +533,7 @@
         let timerInterval = null;
         let timerSeconds = 0;
 
-        // DOM elements
+        // DOM
         const questionText = document.getElementById('question-text');
         const optionsContainer = document.getElementById('options-container');
         const resultDiv = document.getElementById('result');
@@ -241,36 +558,75 @@
         const reviewTestBtn = document.getElementById('review-test');
         const newTestBtn = document.getElementById('new-test');
         const timerDiv = document.getElementById('timer');
+        const timerDisplay = document.getElementById('timer-display');
+        const progressFill = document.getElementById('progress-fill');
+        const progressPercentage = document.getElementById('progress-percentage');
+        const resultCircle = document.getElementById('result-circle');
+
+        function logError(msg) {
+            questionText.innerHTML = `<div style="color:var(--danger);padding:12px">${msg}</div>`;
+            console.error(msg);
+        }
 
         // Load all JSON sets for practice mode
         function loadAllSets() {
+            questionText.innerHTML = `<div style="text-align:center;padding:20px;">
+                <i class="fas fa-spinner fa-spin" style="font-size:24px;margin-bottom:10px;"></i>
+                <p>Loading question sets... (make sure set files are present!)</p>
+            </div>`;
+
             const promises = Object.entries(setFiles).map(([setName, fileName]) =>
-                fetch(fileName).then(res => {
-                    if (!res.ok) throw new Error(`Failed to load ${fileName}`);
-                    return res.json().then(data => [setName, data]);
-                })
+                fetch(fileName)
+                    .then(res => {
+                        if (!res.ok) throw new Error(`Failed to load ${fileName} (HTTP ${res.status})`);
+                        return res.json().then(data => [setName, data]);
+                    })
+                    .catch(error => {
+                        logError(`Could not load <b>${fileName}</b>: ${error.message}`);
+                        return null;
+                    })
             );
+
             return Promise.all(promises).then(results => {
                 let setsObj = {};
-                results.forEach(([setName, data]) => {
-                    setsObj[setName] = data;
+                results.forEach(r => {
+                    if (r) setsObj[r[0]] = r[1];
                 });
+                if (Object.keys(setsObj).length === 0) {
+                    logError("No question sets could be loaded. Please check that your setX.json files are present and being served by your web server.");
+                } else {
+                    questionText.innerHTML = `<div style="text-align:center;padding:20px;">
+                        <i class="fas fa-check-circle" style="font-size:24px;color:var(--success);margin-bottom:10px;"></i>
+                        <p>All question sets loaded.</p>
+                        <p>Select your preferred set and click "Start Practice" to begin.</p>
+                    </div>`;
+                }
                 return setsObj;
             });
         }
 
         // Load single set for test mode
         function loadSet(setName) {
+            questionText.innerHTML = `<div style="text-align:center;padding:20px;">
+                <i class="fas fa-spinner fa-spin" style="font-size:24px;margin-bottom:10px;"></i>
+                <p>Loading question set ${setName}...</p>
+            </div>`;
+
             return fetch(setFiles[setName])
                 .then(res => {
-                    if (!res.ok) throw new Error(`Failed to load ${setFiles[setName]}`);
+                    if (!res.ok) throw new Error(`Failed to load ${setFiles[setName]} (HTTP ${res.status})`);
                     return res.json();
+                })
+                .catch(error => {
+                    logError(`Could not load <b>${setFiles[setName]}</b>: ${error.message}`);
+                    throw error;
                 });
         }
 
-        // Initialize application
+        // Initialize app
         function init() {
             modeSelect.addEventListener('change', handleModeChange);
+            setSelect.addEventListener('change', handleSetChange);
             startTestBtn.addEventListener('click', startTest);
             reviewTestBtn.addEventListener('click', reviewTest);
             newTestBtn.addEventListener('click', newTest);
@@ -279,79 +635,99 @@
             nextBtn.addEventListener('click', nextQuestion);
             randomBtn.addEventListener('click', randomQuestion);
 
+            questionText.innerHTML = `<div style="text-align:center;padding:20px;">
+                <i class="fas fa-book-open" style="font-size:36px;color:var(--primary);margin-bottom:15px;"></i>
+                <h2 style="margin-bottom:10px;">Welcome to the ISTQB Quiz App</h2>
+                <p style="margin-bottom:15px;">This application will help you prepare for your ISTQB certification.</p>
+                <p>Select your preferred mode and question set, then click Start to begin!</p>
+            </div>`;
+
             handleModeChange();
         }
 
-        // Handle mode switching (practice vs test)
+        function handleSetChange() {
+            currentSet = setSelect.value;
+            startTestBtn.innerHTML = currentMode === "practice"
+                ? '<i class="fas fa-play"></i> Start Practice'
+                : '<i class="fas fa-play"></i> Start Test';
+        }
+
         function handleModeChange() {
             currentMode = modeSelect.value;
-
-            // Show set selector for both modes
-            setSelector.style.display = 'block';
-
-            // Update button label
-            startTestBtn.textContent = currentMode === "practice" ? "Start Practice" : "Start Test";
-
-            // Show/hide random button
-            randomBtn.style.display = currentMode === "practice" ? 'inline-block' : 'none';
-
-            // Hide and stop timer
+            startTestBtn.innerHTML = currentMode === "practice"
+                ? '<i class="fas fa-play"></i> Start Practice'
+                : '<i class="fas fa-play"></i> Start Test';
+            randomBtn.style.display = currentMode === "practice" ? 'inline-flex' : 'none';
             timerDiv.style.display = 'none';
             stopTimer();
+            testCompleteDiv.style.display = 'none';
 
-            // If practice mode, load all sets by default
             if (currentMode === "practice") {
-                loadAllSets().then(sets => {
-                    questionSets = sets;
-                    allQuestions = [];
-                    for (const set in questionSets) {
-                        allQuestions = allQuestions.concat(questionSets[set]);
-                    }
-                    initializeSession(allQuestions);
-                });
-            } else {
-                setSelector.style.display = 'block';
-                randomBtn.style.display = 'none';
-                timerDiv.style.display = 'none';
-                stopTimer();
+                loadAllSets()
+                    .then(sets => {
+                        questionSets = sets;
+                        allQuestions = [];
+                        for (const set in questionSets) {
+                            allQuestions = allQuestions.concat(questionSets[set]);
+                        }
+                        questionCountSpan.textContent = allQuestions.length;
+                        totalQuestionsSpan.textContent = allQuestions.length;
+                    })
             }
         }
 
-        // Start test mode (single set)
         function startTest() {
-            currentSet = setSelect.value;
-            loadSet(currentSet).then(qs => {
-                activeQuestions = qs;
-                timerSeconds = 0;
-                updateTimerDisplay();
-                timerDiv.style.display = 'block';
-                startTimer();
-                initializeSession(activeQuestions);
-                testCompleteDiv.style.display = 'none';
-            });
+            testCompleteDiv.style.display = 'none';
+            timerSeconds = 0;
+            updateTimerDisplay();
+
+            if (currentMode === "test") {
+                currentSet = setSelect.value;
+                loadSet(currentSet)
+                    .then(qs => {
+                        timerDiv.style.display = 'flex';
+                        startTimer();
+                        activeQuestions = qs;
+                        initializeSession(activeQuestions);
+                    })
+            } else {
+                currentSet = setSelect.value;
+                if (!currentSet) {
+                    activeQuestions = allQuestions;
+                    initializeSession(activeQuestions);
+                } else {
+                    loadSet(currentSet)
+                        .then(qs => {
+                            activeQuestions = qs;
+                            initializeSession(activeQuestions);
+                        })
+                }
+                timerDiv.style.display = 'none';
+            }
         }
 
-        // Initialize the session
         function initializeSession(questionArray) {
             activeQuestions = questionArray;
+            if (!activeQuestions || activeQuestions.length == 0) {
+                logError("No questions found in the selected set.");
+                return;
+            }
             questionCountSpan.textContent = activeQuestions.length;
             totalQuestionsSpan.textContent = activeQuestions.length;
             answered = new Array(activeQuestions.length).fill(null);
             correctAnswers = 0;
             updateStats();
             loadQuestion(0);
-            // Enable controls
             enableQuestionControls();
         }
 
-        // Load one question
         function loadQuestion(index) {
             if (index < 0 || index >= activeQuestions.length) return;
             currentQuestion = index;
             selectedOption = answered[index];
             currentQuestionSpan.textContent = index + 1;
+            updateProgressBar();
 
-            // Render question text and image (if provided)
             let html = activeQuestions[index].question;
             if (activeQuestions[index].image) {
                 html += `<br><img src="${activeQuestions[index].image}" alt="Question image" style="max-width:100%;margin:10px 0;">`;
@@ -368,6 +744,7 @@
             activeQuestions[index].options.forEach((option, i) => {
                 const optionElement = document.createElement('div');
                 optionElement.className = 'option';
+
                 if (selectedOption === i) {
                     optionElement.classList.add('selected');
                     if (answered[index] !== null) {
@@ -378,19 +755,38 @@
                         }
                     }
                 }
-                optionElement.innerHTML = `${String.fromCharCode(65 + i)}) ${option}`;
+                const marker = document.createElement('div');
+                marker.className = 'option-marker';
+                marker.textContent = String.fromCharCode(65 + i);
+
+                const text = document.createElement('div');
+                text.className = 'option-text';
+                text.innerHTML = option;
+
+                optionElement.appendChild(marker);
+                optionElement.appendChild(text);
+
                 optionElement.addEventListener('click', () => selectOption(i));
                 optionsContainer.appendChild(optionElement);
             });
+
             resultDiv.style.display = 'none';
             resultDiv.textContent = '';
             prevBtn.disabled = index === 0;
             nextBtn.disabled = false;
             checkBtn.disabled = answered[index] !== null;
+
             if (answered[index] !== null) {
                 showResult();
             }
         }
+
+        function updateProgressBar() {
+            const percentage = Math.round(((currentQuestion + 1) / activeQuestions.length) * 100);
+            progressFill.style.width = `${percentage}%`;
+            progressPercentage.textContent = `${percentage}%`;
+        }
+
         function selectOption(index) {
             if (answered[currentQuestion] !== null) return;
             selectedOption = index;
@@ -406,9 +802,7 @@
             showResult();
             updateStats();
             checkBtn.disabled = true;
-            if (currentMode === "test" && isTestComplete()) {
-                completeTest(false);
-            }
+            if (currentMode === "test" && isTestComplete()) completeTest(false);
         }
 
         function showResult() {
@@ -420,11 +814,11 @@
             });
             resultDiv.style.display = 'block';
             if (selectedOption === correctAnswer) {
-                resultDiv.textContent = 'Correct!';
-                resultDiv.style.backgroundColor = '#d4edda';
+                resultDiv.innerHTML = '<i class="fas fa-check-circle"></i> Correct!';
+                resultDiv.style.backgroundColor = 'rgba(76, 201, 240, 0.1)';
             } else {
-                resultDiv.textContent = `Incorrect. The correct answer is ${String.fromCharCode(65 + correctAnswer)}.`;
-                resultDiv.style.backgroundColor = '#f8d7da';
+                resultDiv.innerHTML = `<i class="fas fa-times-circle"></i> Incorrect. The correct answer is ${String.fromCharCode(65 + correctAnswer)}.`;
+                resultDiv.style.backgroundColor = 'rgba(247, 37, 133, 0.1)';
             }
         }
 
@@ -433,7 +827,8 @@
             correctAnswers = answered.reduce((sum, ans, i) => sum + (ans === activeQuestions[i].answer ? 1 : 0), 0);
             totalAnsweredSpan.textContent = answeredCount;
             totalCorrectSpan.textContent = correctAnswers;
-            accuracySpan.textContent = answeredCount > 0 ? `${Math.round((correctAnswers / answeredCount) * 100)}%` : '0%';
+            const accuracy = answeredCount > 0 ? Math.round((correctAnswers / answeredCount) * 100) : 0;
+            accuracySpan.textContent = `${accuracy}%`;
         }
 
         function isTestComplete() {
@@ -442,18 +837,29 @@
 
         function completeTest(timedOut = false) {
             stopTimer();
-            testCompleteDiv.style.display = 'block';
+            testCompleteDiv.style.display = 'flex';
+            testCompleteDiv.style.flexDirection = 'column';
+            testCompleteDiv.style.alignItems = 'center';
+
             const score = Math.round((correctAnswers / activeQuestions.length) * 100);
-            finalScoreSpan.textContent = score;
+            finalScoreSpan.textContent = score + '%';
             finalCorrectSpan.textContent = correctAnswers;
             finalTotalSpan.textContent = activeQuestions.length;
-            // If timed out, show special message
+            resultCircle.textContent = score + '%';
+            let resultColor;
+            if (score >= 80) {
+                resultColor = 'linear-gradient(135deg, #4cc9f0, #3f37c9)';
+            } else if (score >= 60) {
+                resultColor = 'linear-gradient(135deg, #f8961e, #e85d04)';
+            } else {
+                resultColor = 'linear-gradient(135deg, #f72585, #7209b7)';
+            }
+            resultCircle.style.background = resultColor;
             if (timedOut) {
                 testCompleteDiv.querySelector("h2").textContent = "Time's Up! Test Complete!";
             } else {
                 testCompleteDiv.querySelector("h2").textContent = "Test Complete!";
             }
-            // Disable question controls after test is complete
             disableQuestionControls();
         }
 
@@ -472,31 +878,34 @@
         function prevQuestion() {
             if (currentQuestion > 0) loadQuestion(currentQuestion - 1);
         }
+
         function nextQuestion() {
             if (currentQuestion < activeQuestions.length - 1) loadQuestion(currentQuestion + 1);
             else if (currentMode === "test" && isTestComplete()) completeTest(false);
         }
+
         function randomQuestion() {
             const randomIndex = Math.floor(Math.random() * activeQuestions.length);
             loadQuestion(randomIndex);
         }
 
-        // Timer (test mode only)
+        // Timer
         function startTimer() {
             timerInterval = setInterval(() => {
                 timerSeconds++;
                 updateTimerDisplay();
-                // Only enforce limit in Test Mode
                 if (currentMode === "test" && timerSeconds >= TEST_MODE_DURATION_SECONDS) {
                     stopTimer();
-                    completeTest(true); // true = timed out
+                    completeTest(true);
                 }
             }, 1000);
         }
+
         function stopTimer() {
             if (timerInterval) clearInterval(timerInterval);
             timerInterval = null;
         }
+
         function updateTimerDisplay() {
             let displaySeconds;
             if (currentMode === "test") {
@@ -506,7 +915,13 @@
             }
             const minutes = Math.floor(displaySeconds / 60).toString().padStart(2, '0');
             const seconds = (displaySeconds % 60).toString().padStart(2, '0');
-            timerDiv.textContent = `Time: ${minutes}:${seconds}`;
+            timerDisplay.textContent = `${minutes}:${seconds}`;
+            if (currentMode === "test" && displaySeconds < 300) {
+                timerDiv.style.color = 'var(--danger)';
+                if (displaySeconds < 60) {
+                    timerDiv.style.animation = 'pulse 1s infinite';
+                }
+            }
         }
 
         function disableQuestionControls() {
@@ -515,16 +930,16 @@
             prevBtn.disabled = true;
             randomBtn.disabled = true;
         }
+
         function enableQuestionControls() {
             checkBtn.disabled = false;
             nextBtn.disabled = false;
-            prevBtn.disabled = false;
+            prevBtn.disabled = !(currentQuestion > 0);
             randomBtn.disabled = false;
         }
 
         // Start app!
-        init();
+        window.addEventListener('DOMContentLoaded', init);
     </script>
 </body>
-
 </html>
