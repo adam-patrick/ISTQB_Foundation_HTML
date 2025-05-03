@@ -67,16 +67,7 @@
     },
     {
         "question": "The later in the development life cycle a fault is discovered, the more expensive it is to fix. Why?",
-        "options": [{
-            "question": "What is the primary purpose of acceptance testing?",
-            "options": [
-                "To find as many defects as possible",
-                "To validate that the system meets business requirements",
-                "To verify that the system integrates correctly with other systems",
-                "To ensure the system performs well under load"
-            ],
-            "answer": 1
-        },
+        "options": [
             "the documentation is poor, so it takes longer to find out what the software is doing.",
             "wages are rising",
             "the fault has been built into more documentation, code, tests, etc",
